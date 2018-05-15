@@ -1,0 +1,737 @@
+{
+	"variables": [],
+	"info": {
+		"name": "UserOperations",
+		"_postman_id": "e808ec0e-aedf-1876-b7c0-09853d698634",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login Parag",
+			"request": {
+				"url": "https://128.199.237.167/api/v1/userops/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "hrishioa@gmail.com",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "password",
+							"value": "Dinar88!!",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create User Parag",
+			"request": {
+				"url": "http://128.199.237.167/api/v1/userops/create_new_user",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "parag@gmail.com",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "dob",
+							"value": "12/09/1994",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "firstName",
+							"value": "Parag",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "lastName",
+							"value": "Bhatnagar",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "address",
+							"value": "16 College",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "address2",
+							"value": "Avenue West",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "city",
+							"value": "Singapore",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "state",
+							"value": "Singapore",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "country",
+							"value": "Singapore",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "postalCode",
+							"value": "1241243",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "phoneNumber",
+							"value": "23123",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "password",
+							"value": "Dinar88!!",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Data Parag",
+			"request": {
+				"url": "https://128.199.237.167/api/v1/userops/get_user_data",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "authToken",
+							"value": "6a0f65a74abc731dd77e6041a09130f0571fd150500fcf392b29d374ba5de494a25d94913ebfefa0661a69c6d0374d36adfaa6f849b67f5e6522e570ea3e3e49942eca22ed1754a90eca42f286ad47cee983519eddec9c36edbe9f44d08329f671e6b8787dddf909d73e5262028ab0703e61b61b3b184eaab44ef0e7667bac75ceccaeeb71ceb3c983e6bd802045265df5d37b0d5c185230b8e50e76",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Prices",
+			"request": {
+				"url": "https://128.199.237.167/api/v1/util/get_prices",
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Buy DNC with ETH Parag",
+			"request": {
+				"url": "https://128.199.237.167/api/v1/walletops/buy_DNC",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "authToken",
+							"value": "6a0f65a74abc731dd77e6455a19525f04407c35c4e0fcf392b29d374ba5de494a25d949135ede9f167463898866b4f31fcf8f3f049b274593e76b674b46f6f1cc0729b22ed1754a90eca42f286ad47cee983529adced9b30ecbe9f44d08329f671e6b8787dddf909d73e5262028ab0703e61b61b3b184eaab44ef0e7667bac75ceccaeeb71ceb3c983e6bd802045265df5d37b0d5c185230b8e50e76",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "fromCurrency",
+							"value": "ETH",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "amount",
+							"value": "5",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Sell DNC with ETH Parag",
+			"request": {
+				"url": "https://128.199.237.167/api/v1/walletops/sell_DNC",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "authToken",
+							"value": "6a0f65a74abc731dd77e6455a19525f04407c35c4e0fcf392b29d374ba5de494a25d949135ede9f167463898866b4f31fcf8f3f049b274593e76b674b46f6f1cc0729b22ed1754a90eca42f286ad47cee983529adced9b30ecbe9f44d08329f671e6b8787dddf909d73e5262028ab0703e61b61b3b184eaab44ef0e7667bac75ceccaeeb71ceb3c983e6bd802045265df5d37b0d5c185230b8e50e76",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "toCurrency",
+							"value": "ETH",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "amount",
+							"value": "1",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create User Hrishi",
+			"request": {
+				"url": "http://128.199.237.167/api/v1/userops/create_new_user",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "tuser@gmail.com",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "dob",
+							"value": "12/09/1994",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "firstName",
+							"value": "Parag",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "lastName",
+							"value": "Bhatnagar",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "address",
+							"value": "16 College",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "address2",
+							"value": "Avenue West",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "city",
+							"value": "Singapore",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "state",
+							"value": "Singapore",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "country",
+							"value": "Singapore",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "postalCode",
+							"value": "1241243",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "phoneNumber",
+							"value": "23123",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "password",
+							"value": "Dinar88!!",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Data Hrishi",
+			"request": {
+				"url": "https://128.199.237.167/api/v1/userops/get_user_data",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "authToken",
+							"value": "6a0f65a74abc731dd77e7c46ba872ad94c0be2524f40c53a6868903beb10aa93e10bc2d23cf8bcf5654a68c982661b64ffa8f5fc1beb715f3672e470e93a694b9d73ca30f65115f749c844f283fb189bff81529ddcef9d35e5a384179bc426e536b2ee62759ef40c80690635508de4256c36b2193d4d4afdb04ea6e66f7fad74979ea4e12ac9b59285b3b9916d016512b4d76b1d1b510373eeab4d67619874",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer DNC Parag to Hrishi",
+			"request": {
+				"url": "https://128.199.237.167/api/v1/walletops/transfer_DNC",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "authToken",
+							"value": "6a0f65a74abc731dd77e6455a19525f04407c35c4e0fcf392b29d374ba5de494a25d949135ede9f167463898866b4f31fcf8f3f049b274593e76b674b46f6f1cc0729b22ed1754a90eca42f286ad47cee983529adced9b30ecbe9f44d08329f671e6b8787dddf909d73e5262028ab0703e61b61b3b184eaab44ef0e7667bac75ceccaeeb71ceb3c983e6bd802045265df5d37b0d5c185230b8e50e76",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "toAddress",
+							"value": "0x1928ed1f3493e30c36a1bf24d9fa275222ad9ff8",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "amount",
+							"value": "1",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer ETH Parag to Hrishi",
+			"request": {
+				"url": "https://128.199.237.167/api/v1/walletops/send_ETH",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "authToken",
+							"value": "6a0f65a74abc731dd77e6455a19525f04407c35c4e0fcf392b29d374ba5de494a25d949135ede9f167463898866b4f31fcf8f3f049b274593e76b674b46f6f1cc0729b22ed1754a90eca42f286ad47cee983529adced9b30ecbe9f44d08329f671e6b8787dddf909d73e5262028ab0703e61b61b3b184eaab44ef0e7667bac75ceccaeeb71ceb3c983e6bd802045265df5d37b0d5c185230b8e50e76",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "toAddress",
+							"value": "0x1928ed1f3493e30c36a1bf24d9fa275222ad9ff8",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "amount",
+							"value": "10000000000000000000",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Send BTC Parag to Hrishi",
+			"request": {
+				"url": "https://128.199.237.167/api/v1/walletops/send_BTC",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "authToken",
+							"value": "6a0f65a74abc731dd77e6455a19525f04407c35c4e0fcf392b29d374ba5de494a25d949135ede9f167463898866b4f31fcf8f3f049b274593e76b674b46f6f1cc0729b22ed1754a90eca42f286ad47cee983529adced9b30ecbe9f44d08329f671e6b8787dddf909d73e5262028ab0703e61b61b3b184eaab44ef0e7667bac75ceccaeeb71ceb3c983e6bd802045265df5d37b0d5c185230b8e50e76",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "to",
+							"value": "15Jd3wJCXZnogYLgnTFnJqSNuX5meeMA3j",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "amount",
+							"value": "0.001",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Buy DNC with BTC Parag",
+			"request": {
+				"url": "https://128.199.237.167/api/v1/walletops/buy_DNC",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "authToken",
+							"value": "6a0f65a74abc731dd77e7c46ba872ad94c0be2524f40c53a6868903beb10aa93e10bc2d23cf8bcf5654a68c982661b64ffa8f5fc1beb715f3672e470e93a694b9d73ca30f65115f749c844f283fb189bff81529ddcef9d35e5a384179bc426e536b2ee62759ef40c80690635508de4256c36b2193d4d4afdb04ea6e66f7fad74979ea4e12ac9b59285b3b9916d016512b4d76b1d1b510373eeab4d67619874",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "fromCurrency",
+							"value": "BTC",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						},
+						{
+							"key": "amount",
+							"value": "1",
+							"type": "text",
+							"enabled": true,
+							"warning": ""
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Transactions TUser",
+			"request": {
+				"url": "https://128.199.237.167/api/v1/userops/get_transactions",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "authToken",
+							"value": "6a0f65a74abc731dd77e6041a09130f0571fd150500fcf392b29d374ba5de494a25d94913ebfefa0661a69c6d0374d36adfaa6f849b67f5e6522e570ea3e3e49942eca22ed1754a90eca42f286ad47cee983519fd5ea9d30e3be9f44d08329f671e6b8787dddf909d73e5262028ab0703e61b61b3b184eaab44ef0e7667bac75ceccaeeb71ceb3c983e6bd802045265df5d37b0d5c185230b8e50e76",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Buy GSC",
+			"request": {
+				"url": "https://128.199.237.167/api/v1/walletops/buy_GSC",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "authToken",
+							"value": "6a0f65a74abc731dd77e6041a09130f0571fd150500fcf392b29d374ba5de494a25d94913ebfefa0661a69c6d0374d36adfaa6f849b67f5e6522e570ea3e3e49942eca22ed1754a90eca42f286ad47cee983519eddec9c36edbe9f44d08329f671e6b8787dddf909d73e5262028ab0703e61b61b3b184eaab44ef0e7667bac75ceccaeeb71ceb3c983e6bd802045265df5d37b0d5c185230b8e50e76",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "fromCurrency",
+							"value": "ETH",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "instrument",
+							"value": "GOLD_1KG",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "amount",
+							"value": "1",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Buy GSC ETH",
+			"request": {
+				"url": "https://128.199.237.167/api/v1/walletops/buy_GSC",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "authToken",
+							"value": "6a0f65a74abc731dd77e6041a09130f0571fd150500fcf392b29d374ba5de494a25d94913ebfefa0661a69c6d0374d36adfaa6f849b67f5e6522e570ea3e3e49942eca22ed1754a90eca42f286ad47cee983519eddec9c36edbe9f44d08329f671e6b8787dddf909d73e5262028ab0703e61b61b3b184eaab44ef0e7667bac75ceccaeeb71ceb3c983e6bd802045265df5d37b0d5c185230b8e50e76",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "fromCurrency",
+							"value": "ETH",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "instrument",
+							"value": "GOLD_1KG",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "amount",
+							"value": "1",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Sell GSC ETH",
+			"request": {
+				"url": "https://128.199.237.167/api/v1/walletops/sell_GSC",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "authToken",
+							"value": "6a0f65a74abc731dd77e6041a09130f0571fd150500fcf392b29d374ba5de494a25d94913ebfefa0661a69c6d0374d36adfaa6f849b67f5e6522e570ea3e3e49942eca22ed1754a90eca42f286ad47cee983519eddec9c36edbe9f44d08329f671e6b8787dddf909d73e5262028ab0703e61b61b3b184eaab44ef0e7667bac75ceccaeeb71ceb3c983e6bd802045265df5d37b0d5c185230b8e50e76",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "toCurrency",
+							"value": "ETH",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "instrument",
+							"value": "GOLD_1KG",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "amount",
+							"value": "1",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

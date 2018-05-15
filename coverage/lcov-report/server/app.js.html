@@ -1,0 +1,1241 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for server/app.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">server/</a> app.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">81.36% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>192/236</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">81.25% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>13/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">84.62% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>11/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">80.27% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>179/223</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">35×</span>
+<span class="cline-any cline-yes">35×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">23×</span>
+<span class="cline-any cline-yes">23×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">23×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
+&nbsp;
+//Express middleware for istanbul coverage
+var im = require('istanbul-middleware'),
+    isCoverageEnabled = (process.env.COVERAGE == "true"); // or a mechanism of your choice
+&nbsp;
+//before your code is require()-ed, hook the loader for coverage
+<span class="missing-if-branch" title="if path not taken" >I</span>if (isCoverageEnabled) {
+<span class="cstat-no" title="statement not covered" >    console.log('Hook loader for coverage - ensure this is not production!');</span>
+<span class="cstat-no" title="statement not covered" >    im.hookLoader(__dirname);</span>
+        // cover all files except under node_modules
+        // see API for other options
+}
+&nbsp;
+var express = require('express');
+var config 	= require('config');
+var https 	= require('https');
+var fs 		= require('fs');
+var bodyParser = require('body-parser');
+var cors 	= require('cors');
+var db 		= require('./db/core.js');
+//TODO: Move back to bitcoin, testnet now for, you know, testing
+var btc 	= require('./blockchain/tbtc.js');
+var mt4		= require('./mt4/mt4.js');
+&nbsp;
+var app 	= express();
+&nbsp;
+//TODO: expose modules for testing, debate on whether to remove
+exports.db = db;
+exports.btc = btc;
+exports.mt4 = mt4;
+&nbsp;
+app.use(cors({
+	origin: "http://universalblockchains.com",
+	optionsSuccessStatus: 200
+}));
+&nbsp;
+app.use(im.createClientHandler(__dirname));
+&nbsp;
+&nbsp;
+//TODO: Fix Promise nesting
+&nbsp;
+//TODO: Debugging function to print request, remove
+app.use((req, res, next) =&gt; {
+	console.log("\n######REQUEST: ",req.url);
+	next();
+});	
+&nbsp;
+app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
+&nbsp;
+app.get('/', function (req, res) {
+   res.send('DinarDirham Main API.');
+})
+&nbsp;
+function authenticate(req, res, next) {
+	try {
+		console.log("Authenticating...");
+&nbsp;
+		db.authUser(req.body.authToken, req.headers['user-agent']).then((user) =&gt; {
+			req.user = user;
+			next();
+		}, err =&gt; {
+			console.log("Authentication failed for ",req.url," with error ",err);
+			res.send(JSON.stringify({success:false, message: "invalidAuthToken", body:null}));
+		});
+	} catch(exception) {
+<span class="cstat-no" title="statement not covered" >		console.log("Exception in authenticate - ",err);</span>
+<span class="cstat-no" title="statement not covered" >		res.send(JSON.stringify({success:false, message: "invalidResponse", body:null}));</span>
+	}
+}
+&nbsp;
+app.post('/api/v1/userops/create_new_user', function(req,res) {
+	try {
+		console.log("Body: ",req.body);
+		var dob_str = req.body.dob.split("/");
+		var dob = new Date(dob_str[2],dob_str[1]-1,dob_str[0]);
+&nbsp;
+		req.body.dob = dob;
+&nbsp;
+		db.createUser(req.body).then(function(msg) {
+			console.log("Created new user ",req.body.email);
+			res.send(JSON.stringify({success: true, message: "userRegistered"}));
+		}, function(err) {
+			console.log("Error in creating user: ", err);
+			res.send(JSON.stringify({success: false, message: "userExists"}));
+		});
+	} catch(exception) {
+		console.log("CREATE_NEW_USER Exception - ",exception);
+		res.send(JSON.stringify({success:false, message: "invalidRequest"}));
+	}
+});
+&nbsp;
+app.post('/api/v1/userops/login', function(req,res) {
+	console.log("Received login request: ",req.body);
+&nbsp;
+	db.issueToken(req.body.email, req.body.password, req.headers['user-agent']).then(function(token) {
+		res.send(JSON.stringify({
+			success: true,
+			body: token,
+			msg: null
+		}));		
+	}, function(err) {
+		res.send(JSON.stringify({
+			success:false,
+			body: null,
+			msg: err
+		}));
+	});
+});
+&nbsp;
+app.post('/api/v1/userops/get_user_data', authenticate, function(req,res) {
+	var response = {};
+	response.body = null;
+&nbsp;
+	response.success = true;
+&nbsp;
+	response.body = {
+        email : req.user.email,
+	    firstName : req.user.firstName,
+    	lastName : req.user.lastName,
+    	BTCaddress : req.user.btcAddress,
+    	ETHaddress : req.user.ethAddress,
+    	privateAccounts : {
+      		BTCaddress : req.user.privateBtcAddress,
+      		ETHaddress : req.user.privateEthAddress
+    	},
+    	balances: {}
+	};
+&nbsp;
+	var promises = [];
+&nbsp;
+	promises.push(db.getBTCBalance(req.user.btcAddress).then(btcBalance =&gt; response.body.balances.BTC = btcBalance/config.blockchain.btc.BTCtoSATOSHI));
+	promises.push(db.getETHBalance(req.user.ethAddress).then(ethBalance =&gt; response.body.balances.ETH = ethBalance/config.blockchain.eth.ETHtoWEI));
+	promises.push(db.getDNCBalance(req.user.ethAddress).then(dncBalance =&gt; response.body.balances.DNC = dncBalance));
+	promises.push(db.getGSCBalance(req.user.ethAddress).then(balances =&gt; {
+		for(var instrument in balances)
+			response.body.balances[instrument] = balances[instrument];
+	}));
+&nbsp;
+	Promise.all(promises).then(() =&gt; res.send(JSON.stringify(response)), err =&gt; {
+<span class="cstat-no" title="statement not covered" >		console.log("Get User Data failed - ",err);</span>
+<span class="cstat-no" title="statement not covered" >		response.sucess = false;</span>
+<span class="cstat-no" title="statement not covered" >		response.message = "invalidRequest",</span>
+		res.send(JSON.stringify(response));
+	});
+});
+&nbsp;
+app.all('/api/v1/util/get_prices', (req,res) =&gt; {
+	var response = {};
+	var promises = [];
+&nbsp;
+	promises.push(db.getETH().getPrice().then(price =&gt; response.ETH = price));
+	promises.push(btc.getPrice().then(price =&gt; response.BTC = price));
+	promises.push(mt4.getDNCPrice().then(price =&gt; response.DNC = price));
+&nbsp;
+	config.contracts.instruments.forEach(instrument =&gt; 
+		promises.push(mt4.getGSCPrice(instrument[0]).then(price =&gt; response[instrument[0]] = price)));
+&nbsp;
+	Promise.all(promises).then(() =&gt; res.send(JSON.stringify(response)), err =&gt; {
+<span class="cstat-no" title="statement not covered" >		console.log("Get Prices Failed - ",err);</span>
+<span class="cstat-no" title="statement not covered" >		res.send("Error - ",err); </span>//TODO: Move
+	});
+});
+&nbsp;
+app.post('/api/v1/walletops/buy_DNC', authenticate, (req, res) =&gt; {
+	try {
+		var response = {success: false, message: null, body: null};
+		if(typeof req.body.amount != 'number' || req.body.amount &lt; 0)
+			throw "Invalid Amount in buy DNC";
+&nbsp;
+		if(req.body.fromCurrency == 'ETH') {
+			Promise.all([mt4.getDNCPrice(), db.getETH().getPrice()]).then(([DNCPrice, ETHPrice]) =&gt; {
+				var dnc = req.body.amount;
+				var wei = ((dnc * DNCPrice.bid)/ETHPrice) * config.blockchain.eth.ETHtoWEI;
+				console.log("DNC - ",dnc,", DNC Bid - ",DNCPrice.bid, ", ETHPrice - ",ETHPrice,", ETHtoWEI - ",config.blockchain.eth.ETHtoWEI);
+				console.log("ETH total - ",wei);
+				db.withdrawETH(req.user, wei).then(txAddress =&gt; {
+					db.mintNewDNC(req.user.ethAddress, dnc).then(txAddress2 =&gt; {
+						response.body = txAddress2;
+						response.success = true;
+						response.message = null;
+						res.send(JSON.stringify(response));						
+					}, err =&gt; {
+						//TODO: Rollback the minting.
+<span class="cstat-no" title="statement not covered" >						response.message = "invalidResponse";</span>
+<span class="cstat-no" title="statement not covered" >						console.error("FATAL ERROR: Unable to mint after withdrawal - ",err);</span>
+<span class="cstat-no" title="statement not covered" >						res.send(JSON.stringify(response));</span>
+					});
+				}, err =&gt; {
+<span class="cstat-no" title="statement not covered" >					response.message = err;</span>
+<span class="cstat-no" title="statement not covered" >					console.log("Error in Buy DNC - ",err);</span>
+<span class="cstat-no" title="statement not covered" >					res.send(JSON.stringify(response));</span>
+				})
+			});
+		}
+		else if(req.body.fromCurrency == "BTC") {
+			Promise.all([mt4.getDNCPrice(), btc.getPrice()]).then(([DNCPrice, BTCPrice]) =&gt; {
+				var dnc = req.body.amount;
+				var satoshi = ((dnc * DNCPrice.bid)/BTCPrice) * config.blockchain.btc.BTCtoSATOSHI;
+&nbsp;
+				console.log("DNC - ",dnc," is worth ",(satoshi/config.blockchain.btc.BTCtoSATOSHI)," BTC");
+&nbsp;
+				db.withdrawBTC(req.user, satoshi).then(txAddress =&gt; {
+					db.mintNewDNC(req.user.ethAddress, dnc).then(txAddress2 =&gt; {
+						response.body = txAddress2;
+						response.success = true;
+						response.message = null;
+						res.send(JSON.stringify(response));
+					}, err =&gt; {
+<span class="cstat-no" title="statement not covered" >						response.message = "invalidResponse";</span>
+<span class="cstat-no" title="statement not covered" >						console.error("FATAL ERROR: Unable to mint after withdrawal - ",err);</span>
+<span class="cstat-no" title="statement not covered" >						res.send(JSON.stringify(response));</span>
+					});
+				}, err =&gt; {
+<span class="cstat-no" title="statement not covered" >					response.message = err;</span>
+<span class="cstat-no" title="statement not covered" >					console.log("Error in Buy DNC - ",err);</span>
+<span class="cstat-no" title="statement not covered" >					res.send(JSON.stringify(response));</span>
+				});
+			});
+		}
+		else {
+			response.message = "invalidCurrency";
+			res.send(JSON.stringify(response));
+		}
+	} catch(exception) {
+		console.log("Exception in buy DNC - ",exception);
+		console.log(JSON.stringify({success:false, message: "invalidRequest", body:null}));
+		res.send(JSON.stringify({success:false, message: "invalidRequest", body:null}));
+	}
+});
+&nbsp;
+app.post('/api/v1/walletops/sell_DNC', authenticate, (req, res) =&gt; {
+	var response = {success: false, message: null, body: null};
+	var dnc = req.body.amount;
+	if(req.body.toCurrency == 'ETH') {
+		Promise.all([mt4.getDNCPrice(), db.getETH().getPrice()])
+			.then(([DNCPrice, ETHPrice]) =&gt; {
+				var wei = ((dnc * DNCPrice.ask)/ETHPrice) * config.blockchain.eth.ETHtoWEI;
+				return wei;
+			})
+			.then(wei =&gt; {
+				return db.burnDNC(req.user.ethAddress, dnc).then(txAddress =&gt; {return [wei, txAddress]});
+			})
+			.then(([wei, txAddress]) =&gt; {
+				return db.depositETH(req.user, wei).then(txAddress2 =&gt; {return txAddress;});
+			})
+			.then(txAddress =&gt; {
+				response.success = true;
+				response.body = txAddress;
+				res.send(JSON.stringify(response));
+			})
+			.catch(err =&gt; {
+<span class="cstat-no" title="statement not covered" >				console.log("Burn DNC Failed with error ",err);</span>
+<span class="cstat-no" title="statement not covered" >				response.message = err;</span>
+<span class="cstat-no" title="statement not covered" >				res.send(JSON.stringify(response));</span>
+			});
+	} else if(req.body.toCurrency == 'BTC') {
+		Promise.all([mt4.getDNCPrice(), btc.getPrice()])
+			.then(([DNCPrice, BTCPrice]) =&gt; {
+				var satoshi = ((dnc * DNCPrice.ask)/BTCPrice) * config.blockchain.btc.BTCtoSATOSHI; 
+				return satoshi;
+			})
+			.then(satoshi =&gt; {
+				return db.burnDNC(req.user.ethAddress, dnc).then(txAddress =&gt; {return [satoshi, txAddress]});
+			})
+			.then(([satoshi, txAddress]) =&gt; {
+				return db.depositBTC(req.user.btcAddress, satoshi).then(txAddress2 =&gt; {return txAddress});
+			})
+			.then(txAddress =&gt; {
+				console.log("Success..");
+&nbsp;
+				response.success = true;
+				response.body = txAddress;
+				res.send(JSON.stringify(response));
+			})
+			.catch(err =&gt; {
+<span class="cstat-no" title="statement not covered" >				console.log("Burn DNC Failed with error ",err);</span>
+<span class="cstat-no" title="statement not covered" >				response.message = err;</span>
+<span class="cstat-no" title="statement not covered" >				res.send(JSON.stringify(response));</span>
+			});
+	} else {
+		response.message = "invalidCurrency";
+		res.send(JSON.stringify(response))
+	}
+});
+&nbsp;
+app.post('/api/v1/walletops/send_DNC', authenticate, (req, res) =&gt; {
+	var response = {success: false, message: null, body: null};
+	try {
+		var user = req.user;
+		db.transferDNC(user.ethAddress, req.body.toAddress, req.body.amount).then(txAddress =&gt; {
+			response.body = txAddress;
+			response.success = true;
+			res.send(JSON.stringify(response));
+		}, err =&gt; {
+			response.message = err;
+			res.send(JSON.stringify(response));
+		});
+	} catch(exception) {
+<span class="cstat-no" title="statement not covered" >		console.log("Exception occurred in send DNC - ", exception);</span>
+<span class="cstat-no" title="statement not covered" >		response.message = "invalidRequest";</span>
+<span class="cstat-no" title="statement not covered" >		res.send(JSON.stringify(response));</span>
+	}
+});
+&nbsp;
+app.post('/api/v1/walletops/send_ETH', authenticate, (req, res) =&gt; {
+	var response = {success: false, message: null, body: null};
+	try {
+		var user = req.user;
+		db.transferETH(user, req.body.toAddress, req.body.amount * config.blockchain.eth.ETHtoWEI).then(txAddress =&gt; {
+			response.success = true;
+			response.body = txAddress;
+			res.send(JSON.stringify(response));
+		}, err =&gt; {
+			response.message = err;
+			res.send(JSON.stringify(response));
+		});
+	} catch(exception) {
+<span class="cstat-no" title="statement not covered" >		console.log("Exception occurred in sell_DNC - ", exception);</span>
+<span class="cstat-no" title="statement not covered" >		response.message = "invalidRequest";</span>
+<span class="cstat-no" title="statement not covered" >		res.send(JSON.stringify(response));</span>
+	}
+});
+&nbsp;
+app.post('/api/v1/walletops/send_BTC', authenticate, (req, res) =&gt; {
+	var response = {success: false, message: null, body: null};
+	try {
+		var user = req.user;
+		db.transferBTC(req.user, req.body.to, req.body.amount * config.blockchain.btc.BTCtoSATOSHI).then(txAddress =&gt; {
+			response.success = true;
+			response.body = txAddress;
+			res.send(JSON.stringify(response));
+		}, err =&gt; {	
+			console.log("BTC Transfer returned error ",err);
+			response.message = err;
+			res.send(JSON.stringify(response));
+		});
+	} catch(exception) {
+<span class="cstat-no" title="statement not covered" >		console.log("Exception occurred in send_BTC - ", exception);</span>
+<span class="cstat-no" title="statement not covered" >		response.message = "invalidRequest";</span>
+<span class="cstat-no" title="statement not covered" >		res.send(JSON.stringify(response));</span>
+	}
+});
+&nbsp;
+app.post('/api/v1/userops/add_btc_address', authenticate, (req, res) =&gt; {
+	var response = {success: false, msg: "failedtoAdd"};
+	req.user.update({privateBtcAddress: req.body.address}).then(() =&gt; {
+		response.success = "true";
+		response.msg = "addedAddress";
+		res.send(JSON.stringify(response));
+	}, err =&gt; {
+<span class="cstat-no" title="statement not covered" >		console.log("Error in Adding bitcoin address - ", err);</span>
+<span class="cstat-no" title="statement not covered" >		res.send(JSON.stringify(response));</span>
+	})
+});
+&nbsp;
+app.post('/api/v1/userops/add_eth_address', authenticate, (req, res) =&gt; {
+	var response = {success: false, msg: "failedtoAdd"};
+	req.user.update({privateEthAddress: req.body.address}).then(() =&gt; {
+		response.success = "true";
+		response.msg = "addedAddress";
+		res.send(JSON.stringify(response));
+	}, err =&gt; {
+<span class="cstat-no" title="statement not covered" >		console.log("Error in Adding Ethereum address - ", err);</span>
+<span class="cstat-no" title="statement not covered" >		res.send(JSON.stringify(response));</span>
+	})
+});
+&nbsp;
+db.connect().then(function(msg) {
+		https.createServer({
+			      key: fs.readFileSync(config.get("auth.ssl.key")),
+			      cert: fs.readFileSync(config.get("auth.ssl.cert")),
+			      passphrase: config.get("auth.ssl.password")
+			    }, app).listen(config.get("port"));
+&nbsp;
+		app.listen(80, function () {
+		  console.log('Http listening on port 80!')
+		})
+&nbsp;
+		console.log("Https listening on port "+config.get("port"));
+	}, <span class="fstat-no" title="function not covered" >function(err) {</span>
+<span class="cstat-no" title="statement not covered" >	console.log("Database connect failed - exiting with message ",err);</span>
+});
+&nbsp;
+exports.instance = app;
+&nbsp;
+// Error handling
+app.use(<span class="fstat-no" title="function not covered" >function (err, req, res, next) {</span>
+<span class="cstat-no" title="statement not covered" >  console.log("Error in operation - ",err.stack);</span>
+<span class="cstat-no" title="statement not covered" >  if(!res.headersSent)</span>
+<span class="cstat-no" title="statement not covered" >  	res.status(500).send({message: "invalidRequest"});</span>
+});</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Dec 22 2016 09:06:39 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

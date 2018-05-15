@@ -1,0 +1,1204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mochawesome Report Card</title>
+    
+    <link rel="stylesheet" href="css/mochawesome.css">
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="report-info-cnt">
+          <h1 class="report-title">server</h1>
+          <h3 class="report-date">Thursday, December 22 2016, 09:08am</h3>
+        </div>
+        <div class="nav-right">
+          <div class="quick-summary-cnt">
+              <ul class="list-unstyled quick-summary">
+                <li class="qs-item summary-duration" title="Duration">2:11<span>M</span></li>
+                <li class="qs-item summary-suites" title="Suites">11</li>
+                <li class="qs-item summary-tests" title="Tests">43</li>
+                <li class="qs-item summary-passes" title="Passed" data-filter="passed">43</li>
+                <li class="qs-item summary-failures" title="Failed" data-filter="failed">0</li>
+                <li class="qs-item summary-pending" title="Pending" data-filter="pending">0</li>
+              </ul>          </div>
+          <button class="nav-menu-btn open-menu"><i class="icon-menu"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Report Summary -->
+    <div class="summary">
+      <div class="container">
+          <div class="row">
+            <div class="summary-col summary-duration">
+              <h1 class="summary-count">2:11<span>M</span></h1>
+              <h4 class="summary-label">M</h4>
+            </div>
+            <div class="summary-col summary-suites" title="Suites">
+              <h1 class="summary-count">11</h1>
+              <h4 class="summary-label">Suites</h4>
+            </div>
+            <div class="summary-col summary-tests" title="Tests">
+              <h1 class="summary-count">43</h1>
+              <h4 class="summary-label">Tests</h4>
+            </div>
+            <div class="summary-col summary-passes" data-filter="passed" title="Passed">
+              <h1 class="summary-count">43</h1>
+              <h4 class="summary-label">Passed</h4>
+            </div>
+            <div class="summary-col summary-failures" data-filter="failed" title="Failed">
+              <h1 class="summary-count">0</h1>
+              <h4 class="summary-label">Failed</h4>
+            </div>
+            <div class="summary-col summary-pending" data-filter="pending" title="Pending">
+              <h1 class="summary-count">0</h1>
+              <h4 class="summary-label">Pending</h4>
+            </div>
+          </div>      </div>
+    </div>
+    <div class="statusbar">
+      <div class="container">
+          <div class="row">
+            <div class="status-item status-item-pending-pct">0% Pending</div>
+            <div class="status-item status-item-passing-pct success">100% Passing</div>
+          </div>      </div>
+    </div>
+
+    <!-- Suites -->
+    <div class="details container">
+            <section class="suite-wrap">
+          <div id="f567423a-b354-4893-a5a5-8dccbf2f5e12" class="suite has-tests has-passed">
+            <h3 class="suite-title">User Operations</h3>
+            <h5 class="suite-filename">/test/smoke-tests.js</h5>
+            <!-- Suite Chart -->
+            <div class="suite-chart-wrap">
+              <canvas id="f567423a-b354-4893-a5a5-8dccbf2f5e12" class="suite-chart" width="50" height="50" data-total-passes="12" data-total-failures="0" data-total-pending="0" data-total-skipped="0"></canvas>
+            </div>
+            <div class="suite-data-wrap">
+              <!-- Suite Summary -->
+              <ul class="suite-summary list-unstyled">
+                <li class="suite-summary-item duration">15.12 s</li>
+                <li class="suite-summary-item tests">12</li>
+                <li class="suite-summary-item passed">12</li>
+                <li class="suite-summary-item failed">0</li>
+                <li class="suite-summary-item pending">0</li>
+              </ul>
+              <!-- Test Info -->
+              <div class="suite-test-wrap">
+                <div class="suite-test-header" data-toggle="collapse" data-target="#f567423a-b354-4893-a5a5-8dccbf2f5e12-test-list">
+                  <h4 class="suite-test-header-title">Tests</h4>
+                </div>
+                <div id="f567423a-b354-4893-a5a5-8dccbf2f5e12-test-list" class="list-group test-list collapse in">
+                    <div id="bbe33bb9-eabe-4ac8-9b35-82f7f6864dc2" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Create Duplicate User
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#bbe33bb9-eabe-4ac8-9b35-82f7f6864dc2 > .test-code.collapse">Code</button>
+              <span class="test-duration slow">1.153 s</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">agent<br>	.post(<span class="hljs-string">'/api/v1/userops/create_new_user'</span>)<br>	.set(headers)<br>	.send(existingUser)<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		body = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>		body.success.should.be.not.ok;<br>		body.message.should.be.equal(<span class="hljs-string">"userExists"</span>);<br>		done();<br>	});</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="a602d515-6264-4d87-96a2-6a1ca7787161" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Create New User - Valid
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#a602d515-6264-4d87-96a2-6a1ca7787161 > .test-code.collapse">Code</button>
+              <span class="test-duration slow">10.792 s</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small"><span class="hljs-keyword">this</span>.timeout(<span class="hljs-number">20000</span>);<br>agent<br>	.post(<span class="hljs-string">'/api/v1/userops/create_new_user'</span>)<br>	.send(testUser)<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		body = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>		body.success.should.be.ok;<br>		body.message.should.be.equal(<span class="hljs-string">"userRegistered"</span>);<br>		done();<br>	});</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="b56f51e6-a09b-4649-a63a-8d4149d8bd5b" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Create New User - Malformed
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#b56f51e6-a09b-4649-a63a-8d4149d8bd5b > .test-code.collapse">Code</button>
+              <span class="test-duration fast">19 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">agent<br>	.post(<span class="hljs-string">'/api/v1/userops/create_new_user'</span>)<br>	.send({})<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		body = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>		body.success.should.be.not.ok;<br>		body.message.should.equal(<span class="hljs-string">"invalidRequest"</span>);<br>		done();<br>	});</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="7bbb67c1-a1ed-4d90-8e9c-e884ed60370a" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Create Duplicate User
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#7bbb67c1-a1ed-4d90-8e9c-e884ed60370a > .test-code.collapse">Code</button>
+              <span class="test-duration slow">2.8 s</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">agent<br>	.post(<span class="hljs-string">'/api/v1/userops/create_new_user'</span>)<br>	.set(headers)<br>	.send(existingUser)<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		body = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>		body.success.should.equal(<span class="hljs-literal">false</span>);<br>		body.message.should.equal(<span class="hljs-string">"userExists"</span>);<br>		done();<br>	});</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="08a4f0d0-849e-4d30-a581-08363657fd23" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Authenticate User - invalidEmail
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#08a4f0d0-849e-4d30-a581-08363657fd23 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">36 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">agent<br>	.post(<span class="hljs-string">'/api/v1/userops/login'</span>)<br>	.set(headers)<br>	.send({<br>			email: existingUser.email+<span class="hljs-string">','</span>,<br>			password: existingUser.password<br>		})<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		body = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>		body.success.should.equal(<span class="hljs-literal">false</span>);<br>		body.msg.should.equal(<span class="hljs-string">"invalidEmail"</span>);<br>		done();<br>	});</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="8bd25ac3-c5ca-46aa-8d8f-34fa35b40290" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Authenticate User - incorrectPassword
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#8bd25ac3-c5ca-46aa-8d8f-34fa35b40290 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">17 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">agent<br>	.post(<span class="hljs-string">'/api/v1/userops/login'</span>)<br>	.set(headers)<br>	.send({<br>			email: existingUser.email,<br>			password: existingUser.password+<span class="hljs-string">'.'</span><br>		})<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		body = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>		body.success.should.be.equal(<span class="hljs-literal">false</span>);<br>		body.msg.should.equal(<span class="hljs-string">"incorrectPassword"</span>);<br>		done();<br>	});</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="a44cebb8-920d-4bac-94a6-bcdfdd66d5e5" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Authenticate User - Valid
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#a44cebb8-920d-4bac-94a6-bcdfdd66d5e5 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">15 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">agent<br>	.post(<span class="hljs-string">'/api/v1/userops/login'</span>)<br>	.set(headers)<br>	.send({<br>		email: existingUser.email,<br>		password: existingUser.password<br>		})<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		body = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>		body.success.should.be.ok;<br>		<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Token - "</span>,body.body);<br>		body.body.should.be.ok;<br>		(body.msg == <span class="hljs-literal">null</span>).should.be.true;<br>		done();<br>	});</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="89fbc39e-30aa-49df-9169-e8d759718d39" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Add Private BTC Address - Valid
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#89fbc39e-30aa-49df-9169-e8d759718d39 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">28 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">agent<br>	.post(<span class="hljs-string">'/api/v1/userops/add_btc_address'</span>)<br>	.set(headers)<br>	.send({authToken: euser_auth, address: <span class="hljs-string">"mpHUVgexZEa1fg4tDiZRut27WhJTjYLXHR"</span>})<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		body = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>		<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Body - "</span>, body);<br>		body.success.should.be.ok;<br>		body.msg.should.be.equal(<span class="hljs-string">"addedAddress"</span>);<br>		done();<br>	})</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="8b0b398a-fca4-4a1a-8587-484e0fb9f8b3" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Add Private ETH Address - Valid
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#8b0b398a-fca4-4a1a-8587-484e0fb9f8b3 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">12 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">agent<br>	.post(<span class="hljs-string">'/api/v1/userops/add_eth_address'</span>)<br>	.set(headers)<br>	.send({authToken: euser_auth, address: <span class="hljs-string">"0xBafbafbafbaf"</span>})<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		body = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>		body.success.should.be.ok;<br>		body.msg.should.be.equal(<span class="hljs-string">"addedAddress"</span>);<br>		done();<br>	})</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="051032d2-40d0-440f-a3a0-f049da0bcbb4" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Get User Data - Malformed
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#051032d2-40d0-440f-a3a0-f049da0bcbb4 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">6 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">agent<br>	.post(<span class="hljs-string">'/api/v1/userops/get_user_data'</span>)<br>	.set(headers)<br>	.send({authToke:euser_auth+<span class="hljs-string">"."</span>})<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		body = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>		should(body.success).not.ok;<br>		(body.body == <span class="hljs-literal">null</span>).should.be.true;<br>		done();<br>	})</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="03ff10c1-82e0-4417-8068-deaf927d2ce8" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Get User Data - Invalid Token
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#03ff10c1-82e0-4417-8068-deaf927d2ce8 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">5 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">agent<br>	.post(<span class="hljs-string">'/api/v1/userops/get_user_data'</span>)<br>	.set(headers)<br>	.send({authToken:euser_auth+<span class="hljs-string">"."</span>})<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		body = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>		should(body.success).not.ok;<br>		(body.body == <span class="hljs-literal">null</span>).should.be.true;<br>		done();<br>	})</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="aeb99c30-da8b-4023-bd62-de051a1f1283" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Get User Data - Valid Token
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#aeb99c30-da8b-4023-bd62-de051a1f1283 > .test-code.collapse">Code</button>
+              <span class="test-duration slow">921 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">agent<br>	.post(<span class="hljs-string">'/api/v1/userops/get_user_data'</span>)<br>	.set(headers)<br>	.send({authToken:euser_auth})<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		body = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>		body.success.should.be.ok;<br>		should(body.body.BTCAddress).should.be.ok;<br>		should(body.body.ETHAddress).should.be.ok;<br>		done();				<br>	});</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>        </div>
+              </div>
+            </div>
+        
+        
+          </div>
+        </section>
+            <section class="suite-wrap">
+          <div id="a7f7c229-8680-4ab1-9181-8ee51b9337ec" class="suite has-suites">
+            <h3 class="suite-title">Capital Operations</h3>
+            <h5 class="suite-filename">/test/smoke-tests.js</h5>
+        
+              <section class="suite-wrap">
+          <div id="7b75d561-2b28-4206-b600-a3def02bec06" class="suite has-tests has-passed">
+            <h3 class="suite-title">Buy DNC</h3>
+            <h5 class="suite-filename">/test/smoke-tests.js</h5>
+            <!-- Suite Chart -->
+            <div class="suite-chart-wrap">
+              <canvas id="7b75d561-2b28-4206-b600-a3def02bec06" class="suite-chart" width="50" height="50" data-total-passes="5" data-total-failures="0" data-total-pending="0" data-total-skipped="0"></canvas>
+            </div>
+            <div class="suite-data-wrap">
+              <!-- Suite Summary -->
+              <ul class="suite-summary list-unstyled">
+                <li class="suite-summary-item duration">15.849 s</li>
+                <li class="suite-summary-item tests">5</li>
+                <li class="suite-summary-item passed">5</li>
+                <li class="suite-summary-item failed">0</li>
+                <li class="suite-summary-item pending">0</li>
+              </ul>
+              <!-- Test Info -->
+              <div class="suite-test-wrap">
+                <div class="suite-test-header" data-toggle="collapse" data-target="#7b75d561-2b28-4206-b600-a3def02bec06-test-list">
+                  <h4 class="suite-test-header-title">Tests</h4>
+                </div>
+                <div id="7b75d561-2b28-4206-b600-a3def02bec06-test-list" class="list-group test-list collapse in">
+                    <div id="0e30f297-73b5-4fad-ba80-5493e289dcc7" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Buy DNC  - Malformed
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#0e30f297-73b5-4fad-ba80-5493e289dcc7 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">20 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">agent<br>	.post(<span class="hljs-string">'/api/v1/walletops/buy_DNC'</span>)<br>	.set(headers)<br>	.send({authToken: euser_auth, fromCurrency:<span class="hljs-string">'ETH'</span>})<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		body = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>		body.success.should.be.not.ok;<br>		body.message.should.be.equal(<span class="hljs-string">"invalidRequest"</span>);<br>		(body.body == <span class="hljs-literal">null</span>).should.be.true;<br>		done();<br>	});</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="5b1c97f6-66c8-4c8f-a342-1ab9284be295" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Buy DNC  - invalid Authtoken
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#5b1c97f6-66c8-4c8f-a342-1ab9284be295 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">7 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">agent<br>	.post(<span class="hljs-string">'/api/v1/walletops/buy_DNC'</span>)<br>	.set(headers)<br>	.send({authToken: euser_auth+<span class="hljs-string">'.'</span>, fromCurrency:<span class="hljs-string">'ETH'</span>, amount:<span class="hljs-number">0.1</span>})<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		body = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>		body.success.should.be.not.ok;<br>		body.message.should.be.equal(<span class="hljs-string">"invalidAuthToken"</span>);<br>		(body.body == <span class="hljs-literal">null</span>).should.be.true;<br>		done();<br>	});</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="c667b910-dbac-4b7f-9954-7bf1ee26c0ed" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Buy DNC  - invalid Currency
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#c667b910-dbac-4b7f-9954-7bf1ee26c0ed > .test-code.collapse">Code</button>
+              <span class="test-duration fast">17 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">agent<br>	.post(<span class="hljs-string">'/api/v1/walletops/buy_DNC'</span>)<br>	.set(headers)<br>	.send({authToken: euser_auth, fromCurrency:<span class="hljs-string">'WHAT'</span>, amount:<span class="hljs-number">0.1</span>})<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		body = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>		body.success.should.be.not.ok;<br>		body.message.should.be.equal(<span class="hljs-string">"invalidCurrency"</span>);<br>		(body.body == <span class="hljs-literal">null</span>).should.be.true;<br>		done();<br>	});</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="3fd87e70-9fb8-4f6a-b64c-f87a882b09fc" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Buy DNC ETH - Valid
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#3fd87e70-9fb8-4f6a-b64c-f87a882b09fc > .test-code.collapse">Code</button>
+              <span class="test-duration slow">9.864 s</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small"><span class="hljs-keyword">this</span>.timeout(<span class="hljs-number">20000</span>);<br>agent<br>	.post(<span class="hljs-string">'/api/v1/walletops/buy_DNC'</span>)<br>	.set(headers)<br>	.send({authToken: euser_auth, fromCurrency:<span class="hljs-string">'ETH'</span>, amount:<span class="hljs-number">20</span>})<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		body = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>		body.success.should.be.ok;<br>		<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Buy DNC ETH Hash - "</span>, body.body);<br>		(body.message == <span class="hljs-literal">null</span>).should.be.true;<br>		body.body.should.be.ok;<br>		done();<br>	})</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="4dfdb830-3493-4360-aef2-bf4368e57861" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Buy DNC BTC - Valid
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#4dfdb830-3493-4360-aef2-bf4368e57861 > .test-code.collapse">Code</button>
+              <span class="test-duration slow">5.941 s</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small"><span class="hljs-keyword">this</span>.timeout(<span class="hljs-number">20000</span>);<br>agent<br>	.post(<span class="hljs-string">'/api/v1/walletops/buy_DNC'</span>)<br>	.set(headers)<br>	.send({authToken: euser_auth, fromCurrency:<span class="hljs-string">'BTC'</span>, amount:<span class="hljs-number">2</span>})<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		body = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>		body.success.should.be.ok;<br>		(body.message == <span class="hljs-literal">null</span>).should.be.true;<br>		body.body.should.be.ok;<br>		<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Buy DNC BTC Hash - "</span>, body.body);<br>		done();<br>	})</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>        </div>
+              </div>
+            </div>
+        
+        
+          </div>
+        </section>
+              <section class="suite-wrap">
+          <div id="93bb4141-f4ca-45ca-afcf-8bc9b497bc9c" class="suite has-tests has-passed">
+            <h3 class="suite-title">Sell DNC</h3>
+            <h5 class="suite-filename">/test/smoke-tests.js</h5>
+            <!-- Suite Chart -->
+            <div class="suite-chart-wrap">
+              <canvas id="93bb4141-f4ca-45ca-afcf-8bc9b497bc9c" class="suite-chart" width="50" height="50" data-total-passes="4" data-total-failures="0" data-total-pending="0" data-total-skipped="0"></canvas>
+            </div>
+            <div class="suite-data-wrap">
+              <!-- Suite Summary -->
+              <ul class="suite-summary list-unstyled">
+                <li class="suite-summary-item duration">18.102 s</li>
+                <li class="suite-summary-item tests">4</li>
+                <li class="suite-summary-item passed">4</li>
+                <li class="suite-summary-item failed">0</li>
+                <li class="suite-summary-item pending">0</li>
+              </ul>
+              <!-- Test Info -->
+              <div class="suite-test-wrap">
+                <div class="suite-test-header" data-toggle="collapse" data-target="#93bb4141-f4ca-45ca-afcf-8bc9b497bc9c-test-list">
+                  <h4 class="suite-test-header-title">Tests</h4>
+                </div>
+                <div id="93bb4141-f4ca-45ca-afcf-8bc9b497bc9c-test-list" class="list-group test-list collapse in">
+                    <div id="2c8a77a5-c9ff-4100-90be-b954e247f04e" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Sell DNC  - invalid Authtoken
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#2c8a77a5-c9ff-4100-90be-b954e247f04e > .test-code.collapse">Code</button>
+              <span class="test-duration fast">33 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">agent<br>	.post(<span class="hljs-string">'/api/v1/walletops/sell_DNC'</span>)<br>	.set(headers)<br>	.send({authToken: euser_auth+<span class="hljs-string">'.'</span>, toCurrency:<span class="hljs-string">'ETH'</span>, amount:<span class="hljs-number">0.1</span>})<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		body = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>		body.success.should.be.not.ok;<br>		body.message.should.be.equal(<span class="hljs-string">"invalidAuthToken"</span>);<br>		(body.body == <span class="hljs-literal">null</span>).should.be.true;<br>		done();<br>	});</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="77641b6b-0e85-4d8a-a5b1-e9c1397a7b3b" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Sell DNC  - invalid Currency
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#77641b6b-0e85-4d8a-a5b1-e9c1397a7b3b > .test-code.collapse">Code</button>
+              <span class="test-duration fast">26 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">agent<br>	.post(<span class="hljs-string">'/api/v1/walletops/sell_DNC'</span>)<br>	.set(headers)<br>	.send({authToken: euser_auth, toCurrency:<span class="hljs-string">'WHAT'</span>, amount:<span class="hljs-number">0.1</span>})<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		body = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>		body.success.should.be.not.ok;<br>		body.message.should.be.equal(<span class="hljs-string">"invalidCurrency"</span>);<br>		(body.body == <span class="hljs-literal">null</span>).should.be.true;<br>		done();<br>	});</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="d9e29512-b173-45f2-9005-d41234322f40" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Sell DNC ETH - Valid
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#d9e29512-b173-45f2-9005-d41234322f40 > .test-code.collapse">Code</button>
+              <span class="test-duration slow">10.297 s</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small"><span class="hljs-keyword">this</span>.timeout(<span class="hljs-number">20000</span>);<br>agent<br>	.post(<span class="hljs-string">'/api/v1/walletops/sell_DNC'</span>)<br>	.set(headers)<br>	.send({authToken: euser_auth, toCurrency:<span class="hljs-string">'ETH'</span>, amount:<span class="hljs-number">20</span>})<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		body = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>		body.success.should.be.ok;<br>		<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Sell DNC ETH Hash - "</span>, body.body);<br>		(body.message == <span class="hljs-literal">null</span>).should.be.true;<br>		body.body.should.be.ok;<br>		done();<br>	})</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="4fef1078-c67f-4013-a261-ed48dc6eb8c7" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Sell DNC BTC - Valid
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#4fef1078-c67f-4013-a261-ed48dc6eb8c7 > .test-code.collapse">Code</button>
+              <span class="test-duration slow">7.746 s</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small"><span class="hljs-keyword">this</span>.timeout(<span class="hljs-number">20000</span>);<br>agent<br>	.post(<span class="hljs-string">'/api/v1/walletops/sell_DNC'</span>)<br>	.set(headers)<br>	.send({authToken: euser_auth, toCurrency:<span class="hljs-string">'BTC'</span>, amount:<span class="hljs-number">2</span>})<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		body = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>		body.success.should.be.ok;<br>		(body.message == <span class="hljs-literal">null</span>).should.be.true;<br>		body.body.should.be.ok;<br>		<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Sell DNC BTC Hash - "</span>, body.body);<br>		done();<br>	})</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>        </div>
+              </div>
+            </div>
+        
+        
+          </div>
+        </section>
+              <section class="suite-wrap">
+          <div id="026d223f-133d-45c1-b7f3-cbebd41c76cd" class="suite has-tests has-passed">
+            <h3 class="suite-title">transfer BTC</h3>
+            <h5 class="suite-filename">/test/smoke-tests.js</h5>
+            <!-- Suite Chart -->
+            <div class="suite-chart-wrap">
+              <canvas id="026d223f-133d-45c1-b7f3-cbebd41c76cd" class="suite-chart" width="50" height="50" data-total-passes="3" data-total-failures="0" data-total-pending="0" data-total-skipped="0"></canvas>
+            </div>
+            <div class="suite-data-wrap">
+              <!-- Suite Summary -->
+              <ul class="suite-summary list-unstyled">
+                <li class="suite-summary-item duration">4.26 s</li>
+                <li class="suite-summary-item tests">3</li>
+                <li class="suite-summary-item passed">3</li>
+                <li class="suite-summary-item failed">0</li>
+                <li class="suite-summary-item pending">0</li>
+              </ul>
+              <!-- Test Info -->
+              <div class="suite-test-wrap">
+                <div class="suite-test-header" data-toggle="collapse" data-target="#026d223f-133d-45c1-b7f3-cbebd41c76cd-test-list">
+                  <h4 class="suite-test-header-title">Tests</h4>
+                </div>
+                <div id="026d223f-133d-45c1-b7f3-cbebd41c76cd-test-list" class="list-group test-list collapse in">
+                    <div id="aa41fb59-b7a1-45a7-9628-d0a414cf8101" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Transfer BTC - invalidAuthToken
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#aa41fb59-b7a1-45a7-9628-d0a414cf8101 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">19 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">agent<br>	.post(<span class="hljs-string">'/api/v1/walletops/send_BTC'</span>)<br>	.set(headers)<br>	.send({authToken: <span class="hljs-string">"what"</span>, amount:<span class="hljs-number">0.000001</span>})<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"received "</span>, res.text);<br>		body = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>		body.success.should.be.not.ok;<br>		body.message.should.be.equal(<span class="hljs-string">"invalidAuthToken"</span>);<br>		(body.body == <span class="hljs-literal">null</span>).should.be.true;<br>		done();<br>	});</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="0b53cf33-5fc9-4130-a8cd-ba5ae8b86d59" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Transfer BTC - insufficientFunds
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#0b53cf33-5fc9-4130-a8cd-ba5ae8b86d59 > .test-code.collapse">Code</button>
+              <span class="test-duration slow">883 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">agent<br>	.post(<span class="hljs-string">'/api/v1/walletops/send_BTC'</span>)<br>	.set(headers)<br>	.send({authToken: euser_auth, to: config.blockchain.btc.sendAddress, amount:<span class="hljs-number">100000</span>})<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"received "</span>, res.text);<br>		body = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>		body.success.should.be.not.ok;<br>		body.message.should.be.equal(<span class="hljs-string">"insufficientFunds"</span>);<br>		(body.body == <span class="hljs-literal">null</span>).should.be.true;<br>		done();<br>	});</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="7999d5f0-01d9-42ac-aaa3-845c27470fda" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Transfer BTC - Valid
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#7999d5f0-01d9-42ac-aaa3-845c27470fda > .test-code.collapse">Code</button>
+              <span class="test-duration slow">3.124 s</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">agent<br>	.post(<span class="hljs-string">'/api/v1/walletops/send_BTC'</span>)<br>	.set(headers)<br>	.send({authToken: euser_auth, to: config.blockchain.btc.receiveAddress, amount:<span class="hljs-number">0.0001</span>})<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"received "</span>, res.text);<br>		body = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>		body.success.should.be.ok;<br>		(body.message == <span class="hljs-literal">null</span>).should.be.true;<br>		body.body.should.be.ok;<br>		<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"BTC Transfer hash - "</span>,body.body)<br>		done();<br>	});</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>        </div>
+              </div>
+            </div>
+        
+        
+          </div>
+        </section>
+              <section class="suite-wrap">
+          <div id="655346d0-a17d-4a16-8d6d-912b11d132be" class="suite has-tests has-passed">
+            <h3 class="suite-title">transfer ETH</h3>
+            <h5 class="suite-filename">/test/smoke-tests.js</h5>
+            <!-- Suite Chart -->
+            <div class="suite-chart-wrap">
+              <canvas id="655346d0-a17d-4a16-8d6d-912b11d132be" class="suite-chart" width="50" height="50" data-total-passes="3" data-total-failures="0" data-total-pending="0" data-total-skipped="0"></canvas>
+            </div>
+            <div class="suite-data-wrap">
+              <!-- Suite Summary -->
+              <ul class="suite-summary list-unstyled">
+                <li class="suite-summary-item duration">6.250 s</li>
+                <li class="suite-summary-item tests">3</li>
+                <li class="suite-summary-item passed">3</li>
+                <li class="suite-summary-item failed">0</li>
+                <li class="suite-summary-item pending">0</li>
+              </ul>
+              <!-- Test Info -->
+              <div class="suite-test-wrap">
+                <div class="suite-test-header" data-toggle="collapse" data-target="#655346d0-a17d-4a16-8d6d-912b11d132be-test-list">
+                  <h4 class="suite-test-header-title">Tests</h4>
+                </div>
+                <div id="655346d0-a17d-4a16-8d6d-912b11d132be-test-list" class="list-group test-list collapse in">
+                    <div id="09c90dee-62b4-4f51-9111-5b7e90232c62" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Transfer ETH - invalidAuthToken
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#09c90dee-62b4-4f51-9111-5b7e90232c62 > .test-code.collapse">Code</button>
+              <span class="test-duration medium">38 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">agent<br>	.post(<span class="hljs-string">'/api/v1/walletops/send_ETH'</span>)<br>	.set(headers)<br>	.send({authToken: <span class="hljs-string">"what"</span>})<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"received "</span>, res.text);<br>		body = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>		body.success.should.be.not.ok;<br>		body.message.should.be.equal(<span class="hljs-string">"invalidAuthToken"</span>);<br>		(body.body == <span class="hljs-literal">null</span>).should.be.true;<br>		done();<br>	});</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="9a2a2889-7afd-4a06-b44c-ccfe96301869" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Transfer ETH - insufficientFunds
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#9a2a2889-7afd-4a06-b44c-ccfe96301869 > .test-code.collapse">Code</button>
+              <span class="test-duration slow">669 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">agent<br>	.post(<span class="hljs-string">'/api/v1/walletops/send_ETH'</span>)<br>	.set(headers)<br>	.send({authToken: euser_auth, to: config.blockchain.eth.adminAddress, amount: <span class="hljs-number">10000000</span>})<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		body = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>		body.success.should.be.not.ok;<br>		body.message.should.be.equal(<span class="hljs-string">"insufficientFunds"</span>);<br>		(body.body == <span class="hljs-literal">null</span>).should.be.true;<br>		done();<br>	});</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="b131ad1c-f0fd-4d49-b7d6-0d64bd4e7271" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Transfer ETH - Valid
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#b131ad1c-f0fd-4d49-b7d6-0d64bd4e7271 > .test-code.collapse">Code</button>
+              <span class="test-duration slow">5.543 s</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">agent<br>	.post(<span class="hljs-string">'/api/v1/walletops/send_ETH'</span>)<br>	.set(headers)<br>	.send({authToken: euser_auth, to: config.blockchain.eth.adminAddress, amount: <span class="hljs-number">10</span>})<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		body = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>		body.success.should.be.ok;<br>		(body.message == <span class="hljs-literal">null</span>).should.be.true;<br>		<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Send ETH hash - "</span>,body.body);<br>		body.body.should.be.ok;<br>		done();<br>	});</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>        </div>
+              </div>
+            </div>
+        
+        
+          </div>
+        </section>
+              <section class="suite-wrap">
+          <div id="952680ce-e40c-40a3-bebf-7455ef86cbc1" class="suite has-tests has-passed">
+            <h3 class="suite-title">transfer DNC</h3>
+            <h5 class="suite-filename">/test/smoke-tests.js</h5>
+            <!-- Suite Chart -->
+            <div class="suite-chart-wrap">
+              <canvas id="952680ce-e40c-40a3-bebf-7455ef86cbc1" class="suite-chart" width="50" height="50" data-total-passes="3" data-total-failures="0" data-total-pending="0" data-total-skipped="0"></canvas>
+            </div>
+            <div class="suite-data-wrap">
+              <!-- Suite Summary -->
+              <ul class="suite-summary list-unstyled">
+                <li class="suite-summary-item duration">5.166 s</li>
+                <li class="suite-summary-item tests">3</li>
+                <li class="suite-summary-item passed">3</li>
+                <li class="suite-summary-item failed">0</li>
+                <li class="suite-summary-item pending">0</li>
+              </ul>
+              <!-- Test Info -->
+              <div class="suite-test-wrap">
+                <div class="suite-test-header" data-toggle="collapse" data-target="#952680ce-e40c-40a3-bebf-7455ef86cbc1-test-list">
+                  <h4 class="suite-test-header-title">Tests</h4>
+                </div>
+                <div id="952680ce-e40c-40a3-bebf-7455ef86cbc1-test-list" class="list-group test-list collapse in">
+                    <div id="48799f33-6bdf-4371-8f1b-fb3eda7ac797" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Transfer DNC - invalidAuthToken
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#48799f33-6bdf-4371-8f1b-fb3eda7ac797 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">8 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">agent<br>	.post(<span class="hljs-string">'/api/v1/walletops/send_DNC'</span>)<br>	.set(headers)<br>	.send({authToken: <span class="hljs-string">"what"</span>})<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"received "</span>, res.text);<br>		body = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>		body.success.should.be.not.ok;<br>		body.message.should.be.equal(<span class="hljs-string">"invalidAuthToken"</span>);<br>		(body.body == <span class="hljs-literal">null</span>).should.be.true;<br>		done();<br>	});</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="c00774a9-0d9a-4c13-b720-1be09fd12660" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Transfer DNC - insufficientFunds
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#c00774a9-0d9a-4c13-b720-1be09fd12660 > .test-code.collapse">Code</button>
+              <span class="test-duration slow">418 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">agent<br>	.post(<span class="hljs-string">'/api/v1/walletops/send_DNC'</span>)<br>	.set(headers)<br>	.send({authToken: euser_auth, toAddress: config.blockchain.eth.adminAddress, amount: <span class="hljs-number">10000000</span>})<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		body = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>		body.success.should.be.not.ok;<br>		body.message.should.be.equal(<span class="hljs-string">"insufficientFunds"</span>);<br>		(body.body == <span class="hljs-literal">null</span>).should.be.true;<br>		done();<br>	});</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="a70e051b-adf0-4366-849b-03db1d9a2cd9" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Transfer DNC - Valid
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#a70e051b-adf0-4366-849b-03db1d9a2cd9 > .test-code.collapse">Code</button>
+              <span class="test-duration slow">4.740 s</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">agent<br>	.post(<span class="hljs-string">'/api/v1/walletops/send_DNC'</span>)<br>	.set(headers)<br>	.send({authToken: euser_auth, toAddress: config.blockchain.eth.adminAddress, amount: <span class="hljs-number">1</span>})<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		body = <span class="hljs-built_in">JSON</span>.parse(res.text);<br>		body.success.should.be.ok;<br>		(body.message == <span class="hljs-literal">null</span>).should.be.true;<br>		<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Send ETH hash - "</span>,body.body);<br>		body.body.should.be.ok;<br>		done();<br>	});</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>        </div>
+              </div>
+            </div>
+        
+        
+          </div>
+        </section>
+        
+          </div>
+        </section>
+            <section class="suite-wrap">
+          <div id="869d0622-0596-468d-a3a2-589aa294fdd1" class="suite has-tests has-passed">
+            <h3 class="suite-title">Static</h3>
+            <h5 class="suite-filename">/test/smoke-tests.js</h5>
+            <!-- Suite Chart -->
+            <div class="suite-chart-wrap">
+              <canvas id="869d0622-0596-468d-a3a2-589aa294fdd1" class="suite-chart" width="50" height="50" data-total-passes="3" data-total-failures="0" data-total-pending="0" data-total-skipped="0"></canvas>
+            </div>
+            <div class="suite-data-wrap">
+              <!-- Suite Summary -->
+              <ul class="suite-summary list-unstyled">
+                <li class="suite-summary-item duration">304 ms</li>
+                <li class="suite-summary-item tests">3</li>
+                <li class="suite-summary-item passed">3</li>
+                <li class="suite-summary-item failed">0</li>
+                <li class="suite-summary-item pending">0</li>
+              </ul>
+              <!-- Test Info -->
+              <div class="suite-test-wrap">
+                <div class="suite-test-header" data-toggle="collapse" data-target="#869d0622-0596-468d-a3a2-589aa294fdd1-test-list">
+                  <h4 class="suite-test-header-title">Tests</h4>
+                </div>
+                <div id="869d0622-0596-468d-a3a2-589aa294fdd1-test-list" class="list-group test-list collapse in">
+                    <div id="73defce6-4800-4d75-ad7c-9542674df5a1" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Testing Server
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#73defce6-4800-4d75-ad7c-9542674df5a1 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">7 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">agent<br>	.post(<span class="hljs-string">'/'</span>)<br>	.expect(<span class="hljs-number">200</span>)<br>	.end(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{<br>		done();<br>	})</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="d23817de-418d-4ab7-9b0e-afdd9283ab64" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Prices
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#d23817de-418d-4ab7-9b0e-afdd9283ab64 > .test-code.collapse">Code</button>
+              <span class="test-duration slow">292 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">async</span>(<span class="hljs-params">done</span>) </span>{<br>    <span class="hljs-keyword">var</span> context = <span class="hljs-keyword">this</span>;<br>    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onError</span>(<span class="hljs-params"></span>) </span>{<br>      markRemainingTestsAndSubSuitesAsPending(context.test);<br>      process.removeListener(<span class="hljs-string">'uncaughtException'</span>, onError);<br>    }<br>    process.addListener(<span class="hljs-string">'uncaughtException'</span>, onError);<br>    <span class="hljs-keyword">try</span> {<br>      fn.call(context, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{<br>        <span class="hljs-keyword">if</span> (err) {<br>          onError();<br>          done(err);<br>        } <span class="hljs-keyword">else</span> {<br>          process.removeListener(<span class="hljs-string">'uncaughtException'</span>, onError);<br>          done(<span class="hljs-literal">null</span>);<br>        }<br>      });<br>    } <span class="hljs-keyword">catch</span>(ex) {<br>      onError();<br>      <span class="hljs-keyword">throw</span> ex;<br>    }</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="45255918-4fc0-4936-b504-f2351ab8aba6" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Test Endpoint
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#45255918-4fc0-4936-b504-f2351ab8aba6 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">5 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">agent.get(<span class="hljs-string">'/'</span>).expect(<span class="hljs-number">200</span>).end((err,res)=&gt;done());</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>        </div>
+              </div>
+            </div>
+        
+        
+          </div>
+        </section>
+            <section class="suite-wrap">
+          <div id="f7775ad0-631b-4157-8f3f-985b7c54a3a7" class="suite has-suites">
+            <h3 class="suite-title">Contract Modules Direct</h3>
+            <h5 class="suite-filename">/test/smoke-tests.js</h5>
+        
+              <section class="suite-wrap">
+          <div id="921a7f79-3698-400e-b71d-03da1efbfe97" class="suite has-tests has-passed">
+            <h3 class="suite-title">GoldBank</h3>
+            <h5 class="suite-filename">/test/smoke-tests.js</h5>
+            <!-- Suite Chart -->
+            <div class="suite-chart-wrap">
+              <canvas id="921a7f79-3698-400e-b71d-03da1efbfe97" class="suite-chart" width="50" height="50" data-total-passes="5" data-total-failures="0" data-total-pending="0" data-total-skipped="0"></canvas>
+            </div>
+            <div class="suite-data-wrap">
+              <!-- Suite Summary -->
+              <ul class="suite-summary list-unstyled">
+                <li class="suite-summary-item duration">31.716 s</li>
+                <li class="suite-summary-item tests">5</li>
+                <li class="suite-summary-item passed">5</li>
+                <li class="suite-summary-item failed">0</li>
+                <li class="suite-summary-item pending">0</li>
+              </ul>
+              <!-- Test Info -->
+              <div class="suite-test-wrap">
+                <div class="suite-test-header" data-toggle="collapse" data-target="#921a7f79-3698-400e-b71d-03da1efbfe97-test-list">
+                  <h4 class="suite-test-header-title">Tests</h4>
+                </div>
+                <div id="921a7f79-3698-400e-b71d-03da1efbfe97-test-list" class="list-group test-list collapse in">
+                    <div id="d4793114-ea1a-47f4-b931-b4ea94d77793" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Create GoldBank
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#d4793114-ea1a-47f4-b931-b4ea94d77793 > .test-code.collapse">Code</button>
+              <span class="test-duration slow">31.672 s</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">goldBank.create().then(address =&gt; {<br>	(address != goldBankAddress).should.be.true;<br>	goldBank.instance.address = goldBankAddress;<br>	done();<br>}, err =&gt; {<br>	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Error creating goldBank - "</span>,err);<br>	should(<span class="hljs-literal">true</span>).should.be.not.ok;<br>	done();<br>});</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="2f01b783-5870-4203-a850-ef06f70d44ae" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              User Exists Check - true
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#2f01b783-5870-4203-a850-ef06f70d44ae > .test-code.collapse">Code</button>
+              <span class="test-duration fast">25 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">goldBank.ifExists(<span class="hljs-string">"0x81bd72a7c1116fe84b091c1d4d5435a6639e6807"</span>).then(exists =&gt; {<br>	exists.should.be.ok;<br>	done();<br>}, err =&gt; {<br>	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Error checking for user - "</span>,err);<br>	should(<span class="hljs-literal">true</span>).should.be.not.ok;<br>	done();<br>})</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="0ae49006-a8e6-4f65-8df7-3f880123b273" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              User Exists Check - false
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#0ae49006-a8e6-4f65-8df7-3f880123b273 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">9 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">goldBank.ifExists(<span class="hljs-string">"0x81bd72a7c1116fe84b091c1d4d5435a6639e6800"</span>).then(exists =&gt; {<br>	exists.should.not.be.ok;<br>	done();<br>}, err =&gt; {<br>	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Error checking for user - "</span>,err);<br>	should(<span class="hljs-literal">true</span>).should.not.be.ok;<br>	done();<br>});</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="e13cc3d9-0973-4948-870c-2d85489bd6a8" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              User Verified Check - true
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#e13cc3d9-0973-4948-870c-2d85489bd6a8 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">6 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">goldBank.ifVerified(<span class="hljs-string">"0x81bd72a7c1116fe84b091c1d4d5435a6639e6807"</span>).then(verified =&gt; {<br>	verified.should.be.ok;<br>	done();<br>}, err =&gt; {<br>	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Error checking for user - "</span>,err);<br>	should(<span class="hljs-literal">true</span>).should.be.not.ok;<br>	done();<br>})</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="30bcd893-96fd-45aa-9e1a-da190f9b409b" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              User Verified Check - false
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#30bcd893-96fd-45aa-9e1a-da190f9b409b > .test-code.collapse">Code</button>
+              <span class="test-duration fast">4 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">goldBank.ifVerified(<span class="hljs-string">"0x81bd72a7c1116fe84b091c1d4d5435a6639e6800"</span>).then(verified =&gt; {<br>	verified.should.not.be.ok;<br>	done();<br>}, err =&gt; {<br>	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Error checking for user - "</span>,err);<br>	should(<span class="hljs-literal">true</span>).should.not.be.ok;<br>	done();<br>});</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>        </div>
+              </div>
+            </div>
+        
+        
+          </div>
+        </section>
+              <section class="suite-wrap">
+          <div id="ed645244-b5fc-4b57-bc11-1539ce5b93bd" class="suite has-tests has-passed">
+            <h3 class="suite-title">GSCBank</h3>
+            <h5 class="suite-filename">/test/smoke-tests.js</h5>
+            <!-- Suite Chart -->
+            <div class="suite-chart-wrap">
+              <canvas id="ed645244-b5fc-4b57-bc11-1539ce5b93bd" class="suite-chart" width="50" height="50" data-total-passes="5" data-total-failures="0" data-total-pending="0" data-total-skipped="0"></canvas>
+            </div>
+            <div class="suite-data-wrap">
+              <!-- Suite Summary -->
+              <ul class="suite-summary list-unstyled">
+                <li class="suite-summary-item duration">34.459 s</li>
+                <li class="suite-summary-item tests">5</li>
+                <li class="suite-summary-item passed">5</li>
+                <li class="suite-summary-item failed">0</li>
+                <li class="suite-summary-item pending">0</li>
+              </ul>
+              <!-- Test Info -->
+              <div class="suite-test-wrap">
+                <div class="suite-test-header" data-toggle="collapse" data-target="#ed645244-b5fc-4b57-bc11-1539ce5b93bd-test-list">
+                  <h4 class="suite-test-header-title">Tests</h4>
+                </div>
+                <div id="ed645244-b5fc-4b57-bc11-1539ce5b93bd-test-list" class="list-group test-list collapse in">
+                    <div id="4674ea4a-8a7c-4fe3-a2f4-69fcf61012fa" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              Create GSCBank
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#4674ea4a-8a7c-4fe3-a2f4-69fcf61012fa > .test-code.collapse">Code</button>
+              <span class="test-duration slow">34.407 s</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">GSCBank.create().then(address =&gt; {<br>	(address != GSCBankAddress).should.be.true;<br>	GSCBank.instance.address = GSCBankAddress;<br>	done();<br>}, err =&gt; {<br>	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Error creating GSCBank - "</span>,err);<br>	should(<span class="hljs-literal">true</span>).should.be.not.ok;<br>	done();<br>});</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="e3d6eb80-859c-43ce-a768-f3d477a64a84" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              User Exists Check - true
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#e3d6eb80-859c-43ce-a768-f3d477a64a84 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">17 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">GSCBank.ifExists(<span class="hljs-string">"0x81bd72a7c1116fe84b091c1d4d5435a6639e6807"</span>).then(exists =&gt; {<br>	exists.should.be.ok;<br>	done();<br>}, err =&gt; {<br>	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Error checking for user - "</span>,err);<br>	should(<span class="hljs-literal">true</span>).should.be.not.ok;<br>	done();<br>})</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="58850b4b-dc10-4d40-a228-d14d3be041a2" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              User Exists Check - false
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#58850b4b-dc10-4d40-a228-d14d3be041a2 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">12 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">GSCBank.ifExists(<span class="hljs-string">"0x81bd72a7c1116fe84b091c1d4d5435a6639e6800"</span>).then(exists =&gt; {<br>	exists.should.not.be.ok;<br>	done();<br>}, err =&gt; {<br>	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Error checking for user - "</span>,err);<br>	should(<span class="hljs-literal">true</span>).should.not.be.ok;<br>	done();<br>});</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="03faeac5-831c-4dd0-961a-667c18827dc3" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              User Verified Check - true
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#03faeac5-831c-4dd0-961a-667c18827dc3 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">10 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">GSCBank.ifVerified(<span class="hljs-string">"0x81bd72a7c1116fe84b091c1d4d5435a6639e6807"</span>).then(verified =&gt; {<br>	verified.should.be.ok;<br>	done();<br>}, err =&gt; {<br>	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Error checking for user - "</span>,err);<br>	should(<span class="hljs-literal">true</span>).should.be.not.ok;<br>	done();<br>})</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>            <div id="8ac694b7-4fe3-4945-bcd4-c9c25d8b5ed7" class="list-group-item test passed">
+          <!-- Test Heading -->
+          <div class="test-heading">
+            <h4 class="test-title">
+              <span class="text-muted hidden"> it </span>
+              User Verified Check - false
+            </h4>
+            <div class="pull-right">
+              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#8ac694b7-4fe3-4945-bcd4-c9c25d8b5ed7 > .test-code.collapse">Code</button>
+              <span class="test-duration fast">13 ms</span>
+            </div>
+          </div>
+          <!-- Test Errors -->
+          <!-- Test Code -->
+          <div class="test-code collapse">
+            <pre><code class="hljs javascript small">GSCBank.ifVerified(<span class="hljs-string">"0x81bd72a7c1116fe84b091c1d4d5435a6639e6800"</span>).then(verified =&gt; {<br>	verified.should.not.be.ok;<br>	done();<br>}, err =&gt; {<br>	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Error checking for user - "</span>,err);<br>	should(<span class="hljs-literal">true</span>).should.not.be.ok;<br>	done();<br>});</code></pre>
+          </div>
+          <!-- Test Error Stack -->
+        </div>        </div>
+              </div>
+            </div>
+        
+        
+          </div>
+        </section>
+        
+          </div>
+        </section>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>Report generated by <a href="http://adamgruber.github.io/mochawesome/" target="_blank">mochawesome</a>.<br>Designed and built by <a href="https://github.com/adamgruber" target="_blank">adamgruber</a>. &copy;2016.</p>
+      </div>
+    </footer>
+
+    <!-- Nav Menu -->
+    <div class="nav-menu-wrap">
+      <div class="menu-overlay close-menu"></div>
+      <nav class="menu">
+        <button class="nav-menu-btn close-menu"><i class="icon-failed"></i></button>
+        <ul class="list-unstyled main-menu">
+                <li class="nav-menu-item">
+                <a href="#f567423a-b354-4893-a5a5-8dccbf2f5e12" class="nav-menu-item-link has-passes">User Operations</a>
+            </li>
+                <li class="nav-menu-item">
+                <a href="#a7f7c229-8680-4ab1-9181-8ee51b9337ec" class="nav-menu-item-link">Capital Operations</a>
+                  <ul class="list-unstyled sub-menu">
+                    <li class="nav-menu-item">
+                <a href="#7b75d561-2b28-4206-b600-a3def02bec06" class="nav-menu-item-link has-passes">Buy DNC</a>
+            </li>
+                  </ul>
+                  <ul class="list-unstyled sub-menu">
+                    <li class="nav-menu-item">
+                <a href="#93bb4141-f4ca-45ca-afcf-8bc9b497bc9c" class="nav-menu-item-link has-passes">Sell DNC</a>
+            </li>
+                  </ul>
+                  <ul class="list-unstyled sub-menu">
+                    <li class="nav-menu-item">
+                <a href="#026d223f-133d-45c1-b7f3-cbebd41c76cd" class="nav-menu-item-link has-passes">transfer BTC</a>
+            </li>
+                  </ul>
+                  <ul class="list-unstyled sub-menu">
+                    <li class="nav-menu-item">
+                <a href="#655346d0-a17d-4a16-8d6d-912b11d132be" class="nav-menu-item-link has-passes">transfer ETH</a>
+            </li>
+                  </ul>
+                  <ul class="list-unstyled sub-menu">
+                    <li class="nav-menu-item">
+                <a href="#952680ce-e40c-40a3-bebf-7455ef86cbc1" class="nav-menu-item-link has-passes">transfer DNC</a>
+            </li>
+                  </ul>
+            </li>
+                <li class="nav-menu-item">
+                <a href="#869d0622-0596-468d-a3a2-589aa294fdd1" class="nav-menu-item-link has-passes">Static</a>
+            </li>
+                <li class="nav-menu-item">
+                <a href="#f7775ad0-631b-4157-8f3f-985b7c54a3a7" class="nav-menu-item-link">Contract Modules Direct</a>
+                  <ul class="list-unstyled sub-menu">
+                    <li class="nav-menu-item">
+                <a href="#921a7f79-3698-400e-b71d-03da1efbfe97" class="nav-menu-item-link has-passes">GoldBank</a>
+            </li>
+                  </ul>
+                  <ul class="list-unstyled sub-menu">
+                    <li class="nav-menu-item">
+                <a href="#ed645244-b5fc-4b57-bc11-1539ce5b93bd" class="nav-menu-item-link has-passes">GSCBank</a>
+            </li>
+                  </ul>
+            </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/vendor.js"></script>
+    <script src="js/mochawesome.js"></script>
+  </body>
+</html>

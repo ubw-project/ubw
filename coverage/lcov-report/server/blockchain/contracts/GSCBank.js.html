@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for server/blockchain/contracts/GSCBank.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">server/blockchain/contracts/</a> GSCBank.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">52.29% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>57/109</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">30% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>12/40</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">66.67% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>12/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">52.94% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>54/102</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var config = require('config')
+&nbsp;
+var contractABI = [{"constant":true,"inputs":[{"name":"user","type":"address"},{"name":"instrument","type":"string"}],"name":"getBalance","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"sender","type":"address"},{"name":"recipient","type":"address"},{"name":"instrument","type":"string"},{"name":"quantity","type":"uint256"}],"name":"transfer","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"user","type":"address"},{"name":"instrument","type":"string"},{"name":"quantity","type":"uint256"}],"name":"mintNewGSC","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_newAddr","type":"address"}],"name":"createUnverifiedUser","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"newAddr","type":"address"},{"name":"username","type":"string"},{"name":"metaData","type":"string"}],"name":"createUser","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"userAddr","type":"address"}],"name":"getUserInfo","outputs":[{"name":"","type":"string"},{"name":"","type":"string"},{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"denomination","type":"string"},{"name":"metaData","type":"string"}],"name":"createNewInstrument","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"userAddr","type":"address"}],"name":"ifVerified","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"userAddr","type":"address"},{"name":"username","type":"string"},{"name":"metaData","type":"string"}],"name":"verifyUser","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"denomination","type":"string"}],"name":"ifInstrumentExists","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_newAdminAddr","type":"address"}],"name":"changeAdmin","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"denomination","type":"string"}],"name":"getInstrumentInfo","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"users","outputs":[{"name":"username","type":"string"},{"name":"metaData","type":"string"},{"name":"verified","type":"bool"},{"name":"initialized","type":"bool"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"user","type":"address"},{"name":"instrument","type":"string"},{"name":"quantity","type":"uint256"}],"name":"burn","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"userAddr","type":"address"}],"name":"ifExists","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"inputs":[],"payable":false,"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"user","type":"address"},{"indexed":false,"name":"username","type":"string"},{"indexed":false,"name":"metaData","type":"string"}],"name":"CreatedUser","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"user","type":"address"}],"name":"CreatedUnverifiedUser","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"user","type":"address"},{"indexed":false,"name":"username","type":"string"},{"indexed":false,"name":"metaData","type":"string"}],"name":"VerifiedUser","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"user","type":"address"},{"indexed":false,"name":"instrument","type":"string"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Deposited","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":false,"name":"instrument","type":"string"},{"indexed":false,"name":"recipient","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Transfered","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"user","type":"address"},{"indexed":false,"name":"instrument","type":"string"},{"indexed":false,"name":"value","type":"uint256"}],"name":"BurnRequested","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"user","type":"address"},{"indexed":false,"name":"instrument","type":"string"},{"indexed":false,"name":"value","type":"uint256"}],"name":"BurnCancelled","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"user","type":"address"},{"indexed":false,"name":"instrument","type":"string"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Burned","type":"event"}];
+var contractData = '606060405234610000575b33600060006101000a81548173ffffffffffffffffffffffffffffffffffffffff02191690836c010000000000000000000000009081020402179055505b5b6120f2806100576000396000f3606060405236156100d3576000357c0100000000000000000000000000000000000000000000000000000000900480631dd7cecf146100d85780632e0274a21461014c578063439c529a146101d457806348725fd8146102535780634ceb48fd146102865780636386c1c71461033f5780636cf787ed146104305780636d42eee2146104e057806378c188c51461051357806384eee8f1146105cc5780638f283970146106395780639b7afeed1461066c578063a87430ba1461072f578063c45b71de1461087d578063f93edb9e146108fc575b610000565b3461000057610136600480803590602001909190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190505061092f565b6040518082815260200191505060405180910390f35b34610000576101bc600480803590602001909190803590602001909190803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919080359060200190919050506109b8565b60405180821515815260200191505060405180910390f35b346100005761023b600480803590602001909190803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091908035906020019091905050610c91565b60405180821515815260200191505060405180910390f35b346100005761026e6004808035906020019091905050610e48565b60405180821515815260200191505060405180910390f35b3461000057610327600480803590602001909190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091905050610fd9565b60405180821515815260200191505060405180910390f35b346100005761035a6004808035906020019091905050611383565b60405180806020018060200184151581526020018381038352868181518152602001915080519060200190808383829060006004602084601f0104600302600f01f150905090810190601f1680156103c65780820380516001836020036101000a031916815260200191505b508381038252858181518152602001915080519060200190808383829060006004602084601f0104600302600f01f150905090810190601f16801561041f5780820380516001836020036101000a031916815260200191505b509550505050505060405180910390f35b34610000576104c8600480803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091905050611617565b60405180821515815260200191505060405180910390f35b34610000576104fb60048080359060200190919050506117ea565b60405180821515815260200191505060405180910390f35b34610000576105b4600480803590602001909190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190505061183f565b60405180821515815260200191505060405180910390f35b3461000057610621600480803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091905050611c03565b60405180821515815260200191505060405180910390f35b34610000576106546004808035906020019091905050611c59565b60405180821515815260200191505060405180910390f35b34610000576106c1600480803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091905050611cf6565b60405180806020018281038252838181518152602001915080519060200190808383829060006004602084601f0104600302600f01f150905090810190601f1680156107215780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b346100005761074a6004808035906020019091905050611e39565b604051808060200180602001851515815260200184151581526020018381038352878181546001816001161561010002031660029004815260200191508054600181600116156101000203166002900480156107e75780601f106107bc576101008083540402835291602001916107e7565b820191906000526020600020905b8154815290600101906020018083116107ca57829003601f168201915b505083810382528681815460018160011615610100020316600290048152602001915080546001816001161561010002031660029004801561086a5780601f1061083f5761010080835404028352916020019161086a565b820191906000526020600020905b81548152906001019060200180831161084d57829003601f168201915b5050965050505050505060405180910390f35b34610000576108e4600480803590602001909190803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091908035906020019091905050611e81565b60405180821515815260200191505060405180910390f35b346100005761091760048080359060200190919050506120ae565b60405180821515815260200191505060405180910390f35b600061093a82611c03565b151561094957600090506109b2565b600360008473ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000182604051808280519060200190808383829060006004602084601f0104600302600f01f15090500191505090815260200160405180910390205490505b92915050565b6000600060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415610c8857610a19856117ea565b1515610a285760009050610c87565b610a3183611c03565b1515610a405760009050610c87565b81600360008773ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000184604051808280519060200190808383829060006004602084601f0104600302600f01f1509050019150509081526020016040518091039020541015610ab65760009050610c87565b610abf846120ae565b1515610ad057610ace84610e48565b505b81600360008773ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000184604051808280519060200190808383829060006004602084601f0104600302600f01f15090500191505090815260200160405180910390206000828254039250508190555081600360008673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000184604051808280519060200190808383829060006004602084601f0104600302600f01f1509050019150509081526020016040518091039020600082825401925050819055508473ffffffffffffffffffffffffffffffffffffffff167f7a8fe3491bfb709fe7a49ba5220e002bb8d0bbd13af7e0fa32bef461edd79a6484868560405180806020018473ffffffffffffffffffffffffffffffffffffffff1681526020018381526020018281038252858181518152602001915080519060200190808383829060006004602084601f0104600302600f01f150905090810190601f168015610c735780820380516001836020036101000a031916815260200191505b5094505050505060405180910390a2600190505b5b5b949350505050565b6000600060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415610e4057610cf2846120ae565b1515610d015760009050610e3f565b610d0a83611c03565b1515610d195760009050610e3f565b81600360008673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000184604051808280519060200190808383829060006004602084601f0104600302600f01f1509050019150509081526020016040518091039020600082825401925050819055508373ffffffffffffffffffffffffffffffffffffffff167ffd4bdef056842e4615d2a093647094c0b9bf67c63662d614d63fefd617e0add2848460405180806020018381526020018281038252848181518152602001915080519060200190808383829060006004602084601f0104600302600f01f150905090810190601f168015610e2c5780820380516001836020036101000a031916815260200191505b50935050505060405180910390a2600190505b5b5b9392505050565b6000600060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415610fd357610ea9826120ae565b15610eb75760009050610fd2565b6001600160008473ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060020160016101000a81548160ff02191690837f01000000000000000000000000000000000000000000000000000000000000009081020402179055506000600160008473ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060020160006101000a81548160ff02191690837f01000000000000000000000000000000000000000000000000000000000000009081020402179055508173ffffffffffffffffffffffffffffffffffffffff167f530a5f323e127769d688ad6ca826e310dc00c55412ec6c9a436946013428021c60405180905060405180910390a2600190505b5b5b919050565b6000600060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141561137b5761103a846120ae565b15611048576000905061137a565b608060405190810160405280848152602001838152602001600181526020016001815260200150600160008673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000820151816000019080519060200190828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106110ea57805160ff1916838001178555611118565b82800160010185558215611118579182015b828111156111175782518255916020019190600101906110fc565b5b50905061113d91905b80821115611139576000816000905550600101611121565b5090565b50506020820151816001019080519060200190828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061119157805160ff19168380011785556111bf565b828001600101855582156111bf579182015b828111156111be5782518255916020019190600101906111a3565b5b5090506111e491905b808211156111e05760008160009055506001016111c8565b5090565b505060408201518160020160006101000a81548160ff02191690837f010000000000000000000000000000000000000000000000000000000000000090810204021790555060608201518160020160016101000a81548160ff02191690837f01000000000000000000000000000000000000000000000000000000000000009081020402179055509050508373ffffffffffffffffffffffffffffffffffffffff167ffc30328c5f25cc712e3d35ad22780db665c2bb3f7a1d56dd5d195f4103c9ca0b84846040518080602001806020018381038352858181518152602001915080519060200190808383829060006004602084601f0104600302600f01f150905090810190601f16801561130d5780820380516001836020036101000a031916815260200191505b508381038252848181518152602001915080519060200190808383829060006004602084601f0104600302600f01f150905090810190601f1680156113665780820380516001836020036101000a031916815260200191505b5094505050505060405180910390a2600190505b5b5b9392505050565b6020604051908101604052806000815260200150602060405190810160405280600081526020015060006113b6846120ae565b151561143f576000604060405190810160405280600581526020017f66616c736500000000000000000000000000000000000000000000000000000081526020015090604060405190810160405280600581526020017f66616c736500000000000000000000000000000000000000000000000000000081526020015090925092509250611610565b600160008573ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600001600160008673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600101600160008773ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060020160009054906101000a900460ff16828054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156115665780601f1061153b57610100808354040283529160200191611566565b820191906000526020600020905b81548152906001019060200180831161154957829003601f168201915b50505050509250818054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156116025780601f106115d757610100808354040283529160200191611602565b820191906000526020600020905b8154815290600101906020018083116115e557829003601f168201915b505050505091509250925092505b9193909250565b6000600060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614156117e35761167883611c03565b1561168657600090506117e2565b81600284604051808280519060200190808383829060006004602084601f0104600302600f01f15090500191505090815260200160405180910390206000019080519060200190828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061170e57805160ff191683800117855561173c565b8280016001018555821561173c579182015b8281111561173b578251825591602001919060010190611720565b5b50905061176191905b8082111561175d576000816000905550600101611745565b5090565b50506001600284604051808280519060200190808383829060006004602084601f0104600302600f01f150905001915050908152602001604051809103902060010160006101000a81548160ff02191690837f0100000000000000000000000000000000000000000000000000000000000000908102040217905550600190505b5b5b92915050565b60006117f5826120ae565b80156118375750600160008373ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060020160009054906101000a900460ff165b90505b919050565b6000600060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415611bfb576118a0846120ae565b80156118e35750600160008573ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060020160009054906101000a900460ff16155b15611bf5576001600160008673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060020160006101000a81548160ff02191690837f010000000000000000000000000000000000000000000000000000000000000090810204021790555082600160008673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000019080519060200190828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106119c657805160ff19168380011785556119f4565b828001600101855582156119f4579182015b828111156119f35782518255916020019190600101906119d8565b5b509050611a1991905b80821115611a155760008160009055506001016119fd565b5090565b505081600160008673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206001019080519060200190828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f10611a9157805160ff1916838001178555611abf565b82800160010185558215611abf579182015b82811115611abe578251825591602001919060010190611aa3565b5b509050611ae491905b80821115611ae0576000816000905550600101611ac8565b5090565b50508373ffffffffffffffffffffffffffffffffffffffff167f5e94ea0b09d8008f36159078964948ee03c592796297bae00c2be459e9b0cb0684846040518080602001806020018381038352858181518152602001915080519060200190808383829060006004602084601f0104600302600f01f150905090810190601f168015611b845780820380516001836020036101000a031916815260200191505b508381038252848181518152602001915080519060200190808383829060006004602084601f0104600302600f01f150905090810190601f168015611bdd5780820380516001836020036101000a031916815260200191505b5094505050505060405180910390a260019050611bfa565b600090505b5b5b9392505050565b6000600282604051808280519060200190808383829060006004602084601f0104600302600f01f150905001915050908152602001604051809103902060010160009054906101000a900460ff1690505b919050565b6000600060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415611cf05781600060006101000a81548173ffffffffffffffffffffffffffffffffffffffff02191690836c010000000000000000000000009081020402179055505b5b5b919050565b6020604051908101604052806000815260200150611d1382611c03565b1515611d5a57604060405190810160405280600e81526020017f446f6573206e6f742065786973740000000000000000000000000000000000008152602001509050611e34565b600282604051808280519060200190808383829060006004602084601f0104600302600f01f15090500191505090815260200160405180910390206000018054600181600116156101000203166002900480601f016020809104026020016040519081016040528092919081815260200182805460018160011615610100020316600290048015611e2c5780601f10611e0157610100808354040283529160200191611e2c565b820191906000526020600020905b815481529060010190602001808311611e0f57829003601f168201915b505050505090505b919050565b6001602052806000526040600020600091509050806000019080600101908060020160009054906101000a900460ff16908060020160019054906101000a900460ff16905084565b6000600060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614156120a657611ee2846117ea565b1515611ef157600090506120a5565b611efa83611c03565b1515611f0957600090506120a5565b81600360003373ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000184604051808280519060200190808383829060006004602084601f0104600302600f01f1509050019150509081526020016040518091039020541015611f7f57600090506120a5565b81600360003373ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000184604051808280519060200190808383829060006004602084601f0104600302600f01f1509050019150509081526020016040518091039020600082825403925050819055508373ffffffffffffffffffffffffffffffffffffffff167f809ecc34526dde62cd18e078ca7a02a7affc5ae617f80e8ddb1acb83c11ffe97848460405180806020018381526020018281038252848181518152602001915080519060200190808383829060006004602084601f0104600302600f01f150905090810190601f1680156120925780820380516001836020036101000a031916815260200191505b50935050505060405180910390a2600190505b5b5b9392505050565b6000600160008373ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060020160019054906101000a900460ff1690505b91905056';
+&nbsp;
+var adminTxParams = { from:config.get('blockchain.eth.adminAddress'), gas:config.get('contracts.transactionGas') };
+&nbsp;
+var gscInstruments = config.contracts.instruments;
+&nbsp;
+exports.setTxLogger = function(txLogger) {
+	exports.postPendingTx = function(txAddress, funcName, contractAddress, targetAddress, txParams) {
+		// console.log("Posting pending transaction -  ",txAddress,", contract address ",contractAddress," target address ",targetAddress," for function ",funcName," with parameters ",txParams);		
+		txLogger(txAddress, funcName, contractAddress, targetAddress, txParams);
+	}
+}
+&nbsp;
+exports.init = function(web3) {
+	exports.web3 = web3;
+	exports.contract = exports.web3.eth.contract(contractABI);
+	//create the contract if we have the address
+	<span class="missing-if-branch" title="else path not taken" >E</span>if(config.has('contracts.GSCBankAddress') &amp;&amp; config.get('contracts.GSCBankAddress').length) {
+		exports.instance = exports.contract.at(config.get('contracts.GSCBankAddress'));
+	}
+}
+&nbsp;
+function unlockAdmin() {
+	return exports.web3.personal.unlockAccount(config.get('blockchain.eth.adminAddress'), config.get('blockchain.eth.adminPassword'), 1000);
+}
+&nbsp;
+exports.create = function() {
+	console.log("Creating gscbank...");
+	return new Promise(function (resolve, reject) {
+		<span class="missing-if-branch" title="if path not taken" >I</span>if(!unlockAdmin()) {
+<span class="cstat-no" title="statement not covered" >			reject("unlockFailed");</span>
+<span class="cstat-no" title="statement not covered" >			return;</span>
+		}
+		var goldbank = exports.contract.new(
+		   {
+		     from: config.get('blockchain.eth.adminAddress'), 
+		     data: contractData, 
+		     gas: config.get('contracts.creationGas')
+		   }, function(err, contract){
+				<span class="missing-if-branch" title="else path not taken" >E</span>if(!err) {
+			       if(!contract.address) {
+			       		console.log("GSCBank creation transaction posted - ",contract.transactionHash);
+			       } else {
+						console.log('GSCBank contract mined. Save this address - address: ' + contract.address + ' transactionHash: ' + contract.transactionHash);
+						exports.instance = exports.contract.at(contract.address);
+						gscInstruments.forEach(instrument =&gt; 
+							setTimeout(()=&gt;<span class="cstat-no" title="statement not covered" >exports.createNewInstrument(instrument[0],instrument[1]),</span> 5000));
+						
+						resolve(contract.address);
+			       }
+			    } else {
+<span class="cstat-no" title="statement not covered" >			    	console.log("GSCBank creation failed with error ",err);</span>
+<span class="cstat-no" title="statement not covered" >			    	reject(err);</span>
+			    }
+			});
+	});
+}
+&nbsp;
+//constant returns
+exports.getBalance = function(address, instrument) {
+	return new Promise(function (resolve, reject) {
+		exports.instance.getBalance(address, instrument, (err,val) =&gt; {
+			<span class="missing-if-branch" title="else path not taken" >E</span>if(!err) resolve(val);
+			else <span class="cstat-no" title="statement not covered" >reject(err);</span>
+		});
+	});
+}
+&nbsp;
+exports.getUserInfo = <span class="fstat-no" title="function not covered" >function(address) {</span>
+<span class="cstat-no" title="statement not covered" >	return new Promise((resolve, reject) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		exports.instance.getUserInfo(address, (err, val) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >			if(!err) <span class="cstat-no" title="statement not covered" >resolve(val);</span></span>
+			else <span class="cstat-no" title="statement not covered" >reject(err);</span>
+		});
+	});
+}
+&nbsp;
+exports.ifExists = function(address) {
+	return new Promise((resolve, reject) =&gt; {
+		exports.instance.ifExists(address, (err, val) =&gt; {
+			<span class="missing-if-branch" title="else path not taken" >E</span>if(!err) resolve(val);
+			else <span class="cstat-no" title="statement not covered" >reject(err);</span>
+		});
+	});
+}
+&nbsp;
+exports.ifVerified = function(address) {
+	return new Promise((resolve, reject) =&gt; {
+		exports.instance.ifVerified(address, (err, val) =&gt; {
+			<span class="missing-if-branch" title="else path not taken" >E</span>if(!err) resolve(val);
+			else <span class="cstat-no" title="statement not covered" >reject(err);</span>
+		});
+	});	
+}
+&nbsp;
+exports.ifInstrumentExists = <span class="fstat-no" title="function not covered" >function(instrument) {</span>
+<span class="cstat-no" title="statement not covered" >	return new Promise((resolve, reject) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		exports.instance.ifInstrumentExists(instrument, (err, val) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >			if(!err) <span class="cstat-no" title="statement not covered" >resolve(val);</span></span>
+			else <span class="cstat-no" title="statement not covered" >reject(err);</span>
+		});
+	});
+}
+&nbsp;
+//Non-constant returns
+exports.createUser = function(address, username, meta) {
+	return new Promise((resolve, reject) =&gt; {
+		<span class="missing-if-branch" title="if path not taken" >I</span>if(!unlockAdmin())
+<span class="cstat-no" title="statement not covered" >			reject("unlockFailed");</span>
+		else
+			exports.instance.createUser.sendTransaction(address, username, meta, adminTxParams, (err, txAddress) =&gt; {
+				<span class="missing-if-branch" title="else path not taken" >E</span>if(!err) {
+					console.log("Posted user create transaction to GSCBank at address - ",exports.instance.address);
+					exports.postPendingTx(txAddress, "createUser", exports.instance.address, address, {address: address, username:username, meta:meta});
+					resolve(txAddress);
+				}
+				else <span class="cstat-no" title="statement not covered" >reject(err);</span>
+			});
+	});
+}
+&nbsp;
+exports.createNewInstrument = <span class="fstat-no" title="function not covered" >function(instrument, meta) {</span>
+<span class="cstat-no" title="statement not covered" >	return new Promise((resolve, reject) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		if(!unlockAdmin()) {</span>
+<span class="cstat-no" title="statement not covered" >			reject("unlockFailed");</span>
+<span class="cstat-no" title="statement not covered" >			return;</span>
+		}
+<span class="cstat-no" title="statement not covered" >		exports.instance.createNewInstrument.sendTransaction(instrument, meta, adminTxParams, (err, txAddress) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >			if(!err)	<span class="cstat-no" title="statement not covered" >resolve(txAddress);</span></span>
+			else		<span class="cstat-no" title="statement not covered" >reject(err);</span>
+		});
+	});
+}
+&nbsp;
+exports.mintNewGSC = <span class="fstat-no" title="function not covered" >function(address, instrument, quantity) {</span>
+<span class="cstat-no" title="statement not covered" >	return new Promise((resolve, reject) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		if(!unlockAdmin())</span>
+<span class="cstat-no" title="statement not covered" >			reject("unlockFailed");</span>
+		else
+<span class="cstat-no" title="statement not covered" >			exports.instance.mintNewGSC.sendTransaction(address, instrument, quantity, adminTxParams, (err, txAddress) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >				if(!err) {</span>
+<span class="cstat-no" title="statement not covered" >					exports.postPendingTx(txAddress, "mintNewGSC", exports.instance.address, address, {address: address, instrument:instrument, quantity:quantity});</span>
+<span class="cstat-no" title="statement not covered" >					resolve(txAddress);</span>
+				}
+				else <span class="cstat-no" title="statement not covered" >reject(err);</span>
+			});
+	});
+}
+&nbsp;
+exports.burn = <span class="fstat-no" title="function not covered" >function(address, instrument, quantity) {</span>
+<span class="cstat-no" title="statement not covered" >	return new Promise((resolve, reject) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		if(!unlockAdmin())</span>
+<span class="cstat-no" title="statement not covered" >			reject("unlockFailed");</span>
+		else
+<span class="cstat-no" title="statement not covered" >			exports.instance.burn.sendTransaction(address, instrument, quantity, adminTxParams, (err, txAddress) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >				if(!err) {</span>
+<span class="cstat-no" title="statement not covered" >					exports.postPendingTx(txAddress, "burn", exports.instance.address, address, {address: address, instrument:instrument, quantity:quantity});</span>
+<span class="cstat-no" title="statement not covered" >					resolve(txAddress);</span>
+				}
+				else <span class="cstat-no" title="statement not covered" >reject(err);</span>
+			});
+	});
+}
+&nbsp;
+exports.transfer = <span class="fstat-no" title="function not covered" >function(sender, recipient, instrument, quantity) {</span>
+<span class="cstat-no" title="statement not covered" >	return new Promise((resolve, reject) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		if(!unlockAdmin())</span>
+<span class="cstat-no" title="statement not covered" >			reject("unlockFailed");</span>
+		else
+<span class="cstat-no" title="statement not covered" >			exports.instance.transfer.sendTransaction(sender, recipient, instrument, quantity, adminTxParams, (err, txAddress) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >				if(!err) {</span>
+<span class="cstat-no" title="statement not covered" >					exports.postPendingTx(txAddress, "transfer", exports.instance.address, sender, {sender:sender, recipient:recipient, instrument:instrument, quantity:quantity});</span>
+<span class="cstat-no" title="statement not covered" >					resolve(txAddress);</span>
+				}
+				else <span class="cstat-no" title="statement not covered" >reject(err);</span>
+			});
+	});
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Dec 22 2016 09:06:39 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

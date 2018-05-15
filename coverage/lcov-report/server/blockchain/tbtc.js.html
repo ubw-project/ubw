@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for server/blockchain/tbtc.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">server/blockchain/</a> tbtc.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">80.18% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>89/111</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">70.37% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>19/27</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>13/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">79.05% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>83/105</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">26×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var bitcoinjs = require('bitcoinjs-lib');
+var request = require('request');
+var config = require('config');
+&nbsp;
+exports.getPrice = function() {
+    return new Promise(function(resolve, reject) {
+        request('http://api.coindesk.com/v1/bpi/currentprice.json', function(err, res, body) {
+            <span class="missing-if-branch" title="else path not taken" >E</span>if(res.statusCode == 200) {
+                resolve(JSON.parse(body).bpi.USD.rate_float);
+            } else {
+<span class="cstat-no" title="statement not covered" >                console.log("Price getting failed");</span>
+<span class="cstat-no" title="statement not covered" >                reject();</span>
+            }
+        });
+    });
+}
+&nbsp;
+exports.setTxLogger = function(txLogger) {
+    exports.txLogger = txLogger;
+}
+&nbsp;
+exports.createAddress = function() {
+    return new Promise(function(resolve, reject) {
+        try {
+            var keyPair = bitcoinjs.ECPair.makeRandom({network: bitcoinjs.networks.testnet});
+            resolve({address: keyPair.getAddress(), key: keyPair.toWIF()});
+        } catch(exception) {
+<span class="cstat-no" title="statement not covered" >            reject(exception)</span>
+        }
+    });
+}
+&nbsp;
+exports.transfer = function(fromWIF, toAddress, amount, pendingTxs) {
+    amount = Math.floor(amount);
+    console.log("BTC Transfer with toAddress ",toAddress);
+    return new Promise((resolve, reject) =&gt; {
+        try {
+            var fromKeyPair = bitcoinjs.ECPair.fromWIF(fromWIF, bitcoinjs.networks.testnet);
+&nbsp;
+            //get UTXOs
+            exports.getUTXOs(fromKeyPair.getAddress(),pendingTxs).then(utxos =&gt; {
+                <span class="missing-if-branch" title="if path not taken" >I</span>if(utxos.length &lt;= 0) {
+<span class="cstat-no" title="statement not covered" >                    console.log("Found no UTXOs for address ", fromKeyPair.getAddress());</span>
+<span class="cstat-no" title="statement not covered" >                    reject("insufficientFunds");</span>
+<span class="cstat-no" title="statement not covered" >                    return;</span>
+                }
+&nbsp;
+                runningTotal = 0;
+&nbsp;
+                var transaction = new bitcoinjs.TransactionBuilder(bitcoinjs.networks.testnet);
+                txcount = 0;
+                for(tx in utxos) {
+                    if(runningTotal &gt;= amount + config.blockchain.btc.minerFee) break;
+&nbsp;
+                    console.log("Adding tx "+utxos[tx]);
+                    runningTotal += Math.floor(utxos[tx].amount * config.blockchain.btc.BTCtoSATOSHI);
+                    console.log("Added ",Math.floor(utxos[tx].amount * config.blockchain.btc.BTCtoSATOSHI)," satoshis to transaction to make runningTotal ",runningTotal);
+                    transaction.addInput(utxos[tx].tx, utxos[tx].n);
+                	console.log("Added input.");
+                    txcount++;
+                }
+&nbsp;
+                try {
+	                console.log("Adding output - (",toAddress,",",amount,")");
+&nbsp;
+	                transaction.addOutput(toAddress, amount);
+	              	console.log("Adding additional outputs...");
+	                <span class="missing-if-branch" title="else path not taken" >E</span>if(runningTotal &gt; amount + config.blockchain.btc.minerFee)
+	                    transaction.addOutput(fromKeyPair.getAddress(), runningTotal - amount - config.blockchain.btc.minerFee);
+	            } catch(exception) {
+<span class="cstat-no" title="statement not covered" >	            	console.log("Exception - ",exception);</span>
+<span class="cstat-no" title="statement not covered" >	            	reject(exception);</span>
+	            }
+&nbsp;
+&nbsp;
+                console.log("Signing...");
+                for(i=0;i&lt;txcount;i++)
+                    transaction.sign(i, fromKeyPair);
+&nbsp;
+                 // transaction.sign(0, fromKeyPair);
+                console.log("Transaction Built - ");
+                console.log(transaction.build().toHex());
+&nbsp;
+                console.log("Sending bitcoin to the blockchain");
+                request({
+                    url: 'http://tbtc.blockr.io/api/v1/tx/push',
+                    method: "POST",
+                    json: {hex: transaction.build().toHex()}
+                },
+                function (err, res, body) {
+                    <span class="missing-if-branch" title="else path not taken" >E</span>if (!err &amp;&amp; (res.statusCode &gt;= 200 &amp;&amp; res.statusCode &lt; 300)) {
+                        console.log("Success - body is ",body);
+                        resolve(body.data);
+                    }
+                    else {
+<span class="cstat-no" title="statement not covered" >                        console.log("Error in pushing tx to blockchain - ",err,", response - ",res," body - ",body);</span>
+<span class="cstat-no" title="statement not covered" >                        reject("insufficientFunds");</span>
+                    }
+                });
+            }, err =&gt; <span class="cstat-no" title="statement not covered" >reject(err))</span>;
+        } catch (exception) {
+<span class="cstat-no" title="statement not covered" >            console.log("Bitcoin transfer failed with error - ",exception);</span>
+<span class="cstat-no" title="statement not covered" >            reject("insufficientFunds");</span>
+        }        
+    });
+}
+&nbsp;
+exports.getBalance = function(address) {
+    return new Promise(function(resolve, reject) {
+        try {
+            request('http://tbtc.blockr.io/api/v1/address/balance/'+address+'?confirmations=2', (err, res, body) =&gt; {
+                <span class="missing-if-branch" title="else path not taken" >E</span>if(res.statusCode == 200) {
+                    resolve(JSON.parse(body).data.balance * config.blockchain.btc.BTCtoSATOSHI);
+                } else {
+<span class="cstat-no" title="statement not covered" >                    console.log("Bitcoin getBalance for address ",address," failed with ", res.statusCode);</span>
+<span class="cstat-no" title="statement not covered" >                    reject();</span>
+                }
+            });
+        } catch(exception) {
+<span class="cstat-no" title="statement not covered" >            console.log("Exception in BTC getBalance - ",exception);</span>
+<span class="cstat-no" title="statement not covered" >            reject();</span>
+        }
+    });
+}
+&nbsp;
+exports.getUTXOs = function(address, pendingTxs) {
+	return new Promise((resolve, reject) =&gt; {
+		request('http://tbtc.blockr.io/api/v1/address/unspent/'+address+'?unconfirmed=1', (err, res, body) =&gt; {
+			<span class="missing-if-branch" title="else path not taken" >E</span>if(res.statusCode == 200) {
+				// resolve(JSON.parse(body));
+&nbsp;
+				utxos = JSON.parse(body).data.unspent;
+&nbsp;
+				promises = [];
+				utxos.forEach(utxo =&gt; promises.push(exports.getTX(utxo.tx)));
+				if(pendingTxs != undefined) pendingTxs.forEach(pendingTx =&gt; promises.push(exports.getTX(pendingTx)));
+&nbsp;
+				Promise.all(promises).then(utxo_detail =&gt; {
+&nbsp;
+					vins = []
+					utxo_detail.forEach(utxo =&gt; utxo.data.vins.forEach(vin =&gt; vins.push(vin.vout_tx)));
+&nbsp;
+&nbsp;
+					unspent_utxos = [];
+&nbsp;
+					utxo_detail.forEach(utxo =&gt; {
+						utxo.data.vouts.forEach(vout =&gt; {
+							if(vout.address == address &amp;&amp; vins.indexOf(utxo.data.tx) == -1)
+								unspent_utxos.push({
+									tx: utxo.data.tx,
+									amount: vout.amount,
+									n: vout.n,
+									type: vout.type,
+									confirmations: utxo.data.confirmations
+								});
+						});
+					});
+&nbsp;
+					// utxos.forEach(utxo =&gt; {if(vins.indexOf(utxo.tx) == -1) unspent_utxos.push(utxo)}); 
+&nbsp;
+					resolve(unspent_utxos);
+				}, err =&gt; {
+<span class="cstat-no" title="statement not covered" >					console.log("Error getting tx details - ", err);</span>
+<span class="cstat-no" title="statement not covered" >					reject(err);</span>
+				});
+			}
+			else
+<span class="cstat-no" title="statement not covered" >				reject(err);</span>
+		})
+	});
+}
+&nbsp;
+exports.getTX = function(txAddress) {
+	return new Promise((resolve, reject) =&gt; {
+		request('http://tbtc.blockr.io/api/v1/tx/info/'+txAddress, (err, res, body) =&gt; {
+			<span class="missing-if-branch" title="else path not taken" >E</span>if(res.statusCode == 200)
+				resolve(JSON.parse(body));
+			else
+<span class="cstat-no" title="statement not covered" >				reject(err);</span>
+		});
+	});
+}
+&nbsp;
+exports.txMined = function(txAddress) {
+	return new Promise((resolve, reject) =&gt; {
+		request('http://tbtc.blockr.io/api/v1/tx/info/'+txAddress, (err, res, body) =&gt; {
+			<span class="missing-if-branch" title="if path not taken" >I</span>if(res.statusCode != 200)
+<span class="cstat-no" title="statement not covered" >				reject();</span>
+			else
+				resolve(JSON.parse(body).data.confirmations &gt; 1);
+		});
+	})
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Dec 22 2016 09:06:39 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
